@@ -1,0 +1,71 @@
+{
+  "0": {
+    "basicblocks": 1,
+    "calls": "5 4 1",
+    "file": "merge_sort.cpp",
+    "fileloc": 107,
+    "instructions": 25,
+    "name": "merge_sort",
+    "total_instructions": 229
+  },
+  "1": {
+    "basicblocks": 5,
+    "calls": "",
+    "file": "merge_sort.cpp",
+    "fileloc": 47,
+    "instructions": 12,
+    "name": "write_output",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 12
+  },
+  "2": {
+    "basicblocks": 22,
+    "calls": "",
+    "file": "merge_sort.cpp",
+    "fileloc": 4,
+    "instructions": 47,
+    "name": "merge_sort_primitive",
+    "total_instructions": 47
+  },
+  "3": {
+    "basicblocks": 4,
+    "calls": "",
+    "file": "stl_algobase.h",
+    "fileloc": 195,
+    "instructions": 8,
+    "loads": {
+      "L": 2
+    },
+    "name": "min<int>",
+    "total_instructions": 8
+  },
+  "4": {
+    "basicblocks": 28,
+    "calls": "3 3 2",
+    "file": "merge_sort.cpp",
+    "fileloc": 55,
+    "instructions": 117,
+    "loads": {
+      "L": 5
+    },
+    "name": "merge_sort_iterative",
+    "stores": {
+      "L": 6
+    },
+    "total_instructions": 180
+  },
+  "5": {
+    "basicblocks": 5,
+    "calls": "",
+    "file": "merge_sort.cpp",
+    "fileloc": 39,
+    "instructions": 12,
+    "loads": {
+      "L": 1
+    },
+    "name": "read_input",
+    "total_instructions": 12
+  }
+}

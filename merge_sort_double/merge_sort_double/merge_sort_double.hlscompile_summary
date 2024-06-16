@@ -1,0 +1,247 @@
+<ENTRY>
+{
+ "thisFile": "/home/claxl/Documents/Double/merge_sort_double/merge_sort_double/merge_sort_double.hlscompile_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Sat Jun  8 17:24:46 2024",
+ "timestampMillis": "1717860286193",
+ "buildStep": {
+  "cmdId": "31c4d071-2a27-4740-9800-682e8992bad7",
+  "name": "v++",
+  "logFile": "/home/claxl/Documents/Double/merge_sort_double/merge_sort_double/logs/merge_sort_double.steps.log",
+  "commandLine": "/tools/Xilinx/Vitis/2023.2/bin/unwrapped/lnx64.o/v++  -c --mode hls --config /home/claxl/Documents/Double/merge_sort_double/hls_config.cfg --work_dir merge_sort_double ",
+  "args": [
+   "-c",
+   "--mode",
+   "hls",
+   "--config",
+   "/home/claxl/Documents/Double/merge_sort_double/hls_config.cfg",
+   "--work_dir",
+   "merge_sort_double"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/claxl/Documents/Double/merge_sort_double/hls_config.cfg",
+    "content": "part=xc7z020clg400-1\n\n[hls]\nflow_target=vivado\npackage.output.format=ip_catalog\npackage.output.syn=false\ntb.file=test.cpp\nsyn.file=/home/claxl/Documents/merge_sort_double.hpp\nsyn.file=merge_sort.cpp\nsyn.file=merge_sort.hpp\nsyn.top=merge_sort\n"
+   }
+  ],
+  "cwd": "/home/claxl/Documents/Double/merge_sort_double"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Jun  8 17:24:46 2024",
+ "timestampMillis": "1717860286194",
+ "status": {
+  "cmdId": "31c4d071-2a27-4740-9800-682e8992bad7",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Sat Jun  8 17:24:48 2024",
+ "timestampMillis": "1717860288567",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_COMPILE",
+  "target": "TT_HW",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "merge_sort",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/claxl/Documents/merge_sort_double.hpp",
+     "/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp",
+     "/home/claxl/Documents/Double/merge_sort_double/merge_sort.hpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2023.2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sat Jun  8 17:24:48 2024",
+ "timestampMillis": "1717860288568",
+ "buildStep": {
+  "cmdId": "48fa5102-0e12-4819-810a-e6c680d54164",
+  "name": "csynth_design",
+  "logFile": "/home/claxl/Documents/Double/merge_sort_double/merge_sort_double/hls/hls.log",
+  "commandLine": "csynth_design",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/claxl/Documents/Double/merge_sort_double"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Jun  8 17:24:48 2024",
+ "timestampMillis": "1717860288568",
+ "status": {
+  "cmdId": "48fa5102-0e12-4819-810a-e6c680d54164",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun  8 17:24:48 2024",
+ "timestampMillis": "1717860288568",
+ "report": {
+  "path": "/home/claxl/Documents/Double/merge_sort_double/merge_sort_double/hls/hls_data.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "HLS_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun  8 17:24:48 2024",
+ "timestampMillis": "1717860288569",
+ "report": {
+  "path": "/home/claxl/Documents/Double/merge_sort_double/merge_sort_double/hls/syn/report/csynth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "HLS_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun  8 17:24:48 2024",
+ "timestampMillis": "1717860288569",
+ "report": {
+  "path": "/home/claxl/Documents/Double/merge_sort_double/merge_sort_double/hls/syn/report/csynth.xml",
+  "name": "",
+  "fileType": "XML",
+  "reportType": "HLS_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun  8 17:58:29 2024",
+ "timestampMillis": "1717862309788",
+ "report": {
+  "path": "/home/claxl/Documents/Double/merge_sort_double/merge_sort_double/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_DATAFLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun  8 17:58:29 2024",
+ "timestampMillis": "1717862309788",
+ "report": {
+  "path": "/home/claxl/Documents/Double/merge_sort_double/merge_sort_double/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_FUNCTION_CALL_GRAPH",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun  8 17:58:29 2024",
+ "timestampMillis": "1717862309788",
+ "report": {
+  "path": "/home/claxl/Documents/Double/merge_sort_double/merge_sort_double/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_SCHEDULE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Jun  8 17:58:29 2024",
+ "timestampMillis": "1717862309788",
+ "status": {
+  "cmdId": "48fa5102-0e12-4819-810a-e6c680d54164",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Jun  8 17:58:30 2024",
+ "timestampMillis": "1717862310801",
+ "status": {
+  "cmdId": "31c4d071-2a27-4740-9800-682e8992bad7",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun  8 17:58:30 2024",
+ "timestampMillis": "1717862310819",
+ "report": {
+  "path": "/home/claxl/Documents/Double/merge_sort_double/merge_sort_double/reports/v++_compile_merge_sort_double_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun  8 17:58:30 2024",
+ "timestampMillis": "1717862310819",
+ "report": {
+  "path": "/home/claxl/Documents/Double/merge_sort_double/merge_sort_double/reports/.db/v++_compile_merge_sort_double_guidance.pb3",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

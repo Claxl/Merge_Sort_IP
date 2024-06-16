@@ -1,0 +1,30 @@
+[
+  {
+    "directory": "/home/claxl/Documents/NECSTCamp/merge_sort",
+    "arguments": [
+      "/tools/Xilinx/Vitis_HLS/2023.2/tps/lnx64/gcc-8.3.0/bin/g++",
+      "-isystem/tools/Xilinx/Vitis_HLS/2023.2/include",
+      "-isystem/tools/Xilinx/Vitis_HLS/2023.2/include/etc",
+      "-isystem/tools/Xilinx/Vitis_HLS/2023.2/include/ap_sysc",
+      "-isystem/tools/Xilinx/Vitis_HLS/2023.2/lnx64/tools/auto_cc/include",
+      "-isystem/tools/Xilinx/Vitis_HLS/2023.2/lnx64/tools/systemc/include",
+      "--compile",
+      "/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp"
+    ],
+    "file": "/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp"
+  },
+  {
+    "directory": "/home/claxl/Documents/NECSTCamp/merge_sort",
+    "arguments": [
+      "/tools/Xilinx/Vitis_HLS/2023.2/tps/lnx64/gcc-8.3.0/bin/g++",
+      "-isystem/tools/Xilinx/Vitis_HLS/2023.2/include",
+      "-isystem/tools/Xilinx/Vitis_HLS/2023.2/include/etc",
+      "-isystem/tools/Xilinx/Vitis_HLS/2023.2/include/ap_sysc",
+      "-isystem/tools/Xilinx/Vitis_HLS/2023.2/lnx64/tools/auto_cc/include",
+      "-isystem/tools/Xilinx/Vitis_HLS/2023.2/lnx64/tools/systemc/include",
+      "--compile",
+      "/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.hpp"
+    ],
+    "file": "/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.hpp"
+  }
+]

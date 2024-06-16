@@ -1,0 +1,72 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:9:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="merge_sort_primitive" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:42:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="read_input" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:50:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="write_output" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:60:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="merge_sort_iterative" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=left_stream depth=1024" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:61:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="merge_sort_iterative" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=right_stream depth=1024" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:62:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="merge_sort_iterative" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=temp_stream depth=1024" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:67:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="merge_sort_iterative" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=buffer complete dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:72:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="merge_sort_iterative" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:84:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="merge_sort_iterative" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:94:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="merge_sort_iterative" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:102:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="merge_sort_iterative" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="directive:1:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="merge_sort" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=merge_sort" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:108:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="merge_sort" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite port=return bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:110:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="merge_sort" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=m_axi port=input bundle=gmem depth=1024 offset=slave" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:111:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="merge_sort" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=m_axi port=output bundle=gmem depth=1024 offset=slave" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:113:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="merge_sort" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite port=input bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:114:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="merge_sort" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite port=output bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:115:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="merge_sort" ARG_PragmaIsValid="1" ARG_PragmaType="dataflow" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:120:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="merge_sort" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=input_stream depth=2" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:121:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="merge_sort" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=output_stream depth=2" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:55:0" msg_body="Inlining function 'int const&amp; std::min&lt;int&gt;(int const&amp;, int const&amp;)' into 'merge_sort_iterative(hls::stream&lt;ap_uint&lt;8&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;8&gt;, 0&gt;&amp;)'">
+        <args Callee="int const&amp; std::min&lt;int&gt;(int const&amp;, int const&amp;)" Callee-DebugLoc="File /tools/Xilinx/Vitis_HLS/2023.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/bits/stl_algobase.h Line 196 Column 0" Caller="merge_sort_iterative(hls::stream&lt;ap_uint&lt;8&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;8&gt;, 0&gt;&amp;)" Caller-DebugLoc="File /home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp Line 55 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:55:0" msg_body="Inlining function 'merge_sort_primitive(hls::stream&lt;ap_uint&lt;8&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;8&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;8&gt;, 0&gt;&amp;)' into 'merge_sort_iterative(hls::stream&lt;ap_uint&lt;8&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;8&gt;, 0&gt;&amp;)'">
+        <args Callee="merge_sort_primitive(hls::stream&lt;ap_uint&lt;8&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;8&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;8&gt;, 0&gt;&amp;)" Callee-DebugLoc="File /home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp Line 4 Column 0" Caller="merge_sort_iterative(hls::stream&lt;ap_uint&lt;8&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;8&gt;, 0&gt;&amp;)" Caller-DebugLoc="File /home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp Line 55 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:65:9" msg_body="Applying array_partition to 'buffer': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="buffer"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

@@ -1,0 +1,31 @@
+#-----------------------------------------------------------
+# xsim v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Sun Jun  9 11:47:25 2024
+# Process ID: 33992
+# Current directory: /home/claxl/Documents/Double/merge_sort_double/merge_sort_double/hls/sim/verilog
+# Command line: xsim -mode tcl -source {xsim.dir/merge_sort/xsim_script.tcl}
+# Log file: /home/claxl/Documents/Double/merge_sort_double/merge_sort_double/hls/sim/verilog/xsim.log
+# Journal file: /home/claxl/Documents/Double/merge_sort_double/merge_sort_double/hls/sim/verilog/xsim.jou
+# Running On: claudios, OS: Linux, CPU Frequency: 4626.451 MHz, CPU Physical cores: 4, Host memory: 24873 MB
+#-----------------------------------------------------------
+source xsim.dir/merge_sort/xsim_script.tcl
+# xsim {merge_sort} -autoloadwcfg -tclbatch {merge_sort.tcl}
+Time resolution is 1 ps
+source merge_sort.tcl
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 1 [n/a] @ "125000"
+// RTL Simulation : 1 / 1 [n/a] @ "656825000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 656885 ns : File "/home/claxl/Documents/Double/merge_sort_double/merge_sort_double/hls/sim/verilog/merge_sort.autotb.v" Line 733
+run: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:08 . Memory (MB): peak = 1234.371 ; gain = 0.000 ; free physical = 11226 ; free virtual = 22986
+## quit
+INFO: [Common 17-206] Exiting xsim at Sun Jun  9 11:47:35 2024...

@@ -1,0 +1,50 @@
+{
+  "0": {
+    "basicblocks": 1,
+    "calls": "3 2 1",
+    "file": "merge_sort.cpp",
+    "fileloc": 107,
+    "instructions": 25,
+    "name": "merge_sort",
+    "total_instructions": 187
+  },
+  "1": {
+    "basicblocks": 3,
+    "calls": "",
+    "file": "merge_sort.cpp",
+    "fileloc": 47,
+    "instructions": 9,
+    "name": "write_output",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 9
+  },
+  "2": {
+    "basicblocks": 38,
+    "calls": "",
+    "file": "merge_sort.cpp",
+    "fileloc": 55,
+    "instructions": 144,
+    "loads": {
+      "L": 9
+    },
+    "name": "merge_sort_iterative",
+    "stores": {
+      "L": 6
+    },
+    "total_instructions": 144
+  },
+  "3": {
+    "basicblocks": 3,
+    "calls": "",
+    "file": "merge_sort.cpp",
+    "fileloc": 39,
+    "instructions": 9,
+    "loads": {
+      "L": 1
+    },
+    "name": "read_input",
+    "total_instructions": 9
+  }
+}

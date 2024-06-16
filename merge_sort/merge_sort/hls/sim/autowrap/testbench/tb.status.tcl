@@ -1,0 +1,1 @@
+set ::AESL_AUTOSIM::gTopFileName /home/claxl/Documents/NECSTCamp/merge_sort/merge_sort/hls/./sim/autowrap/testbench/merge_sort.cpp_pre.cpp.tb.cpp

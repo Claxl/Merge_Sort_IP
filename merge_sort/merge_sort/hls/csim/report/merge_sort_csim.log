@@ -1,0 +1,16 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../test.cpp in debug mode
+   Compiling ../../../../merge_sort_double.cpp in debug mode
+   Compiling ../../../../merge_sort.cpp in debug mode
+   Generating csim.exe
+/bin/ld: obj/merge_sort.o: in function `std::deque<std::array<char, 1ul>, std::allocator<std::array<char, 1ul> > >::_M_destroy_data(std::_Deque_iterator<std::array<char, 1ul>, std::array<char, 1ul>&, std::array<char, 1ul>*>, std::_Deque_iterator<std::array<char, 1ul>, std::array<char, 1ul>&, std::array<char, 1ul>*>, std::allocator<std::array<char, 1ul> > const&)':
+/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort/hls/csim/build/../../../../merge_sort.cpp:4: multiple definition of `merge_sort_primitive(hls::stream<ap_uint<8>, 0>&, hls::stream<ap_uint<8>, 0>&, hls::stream<ap_uint<8>, 0>&)'; obj/merge_sort_double.o:/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort/hls/csim/build/../../../../merge_sort_double.cpp:5: first defined here
+/bin/ld: obj/merge_sort.o: in function `write_output(ap_uint<8>*, hls::stream<ap_uint<8>, 0>&)':
+/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort/hls/csim/build/../../../../merge_sort.cpp:47: multiple definition of `write_output(ap_uint<8>*, hls::stream<ap_uint<8>, 0>&)'; obj/merge_sort_double.o:/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort/hls/csim/build/../../../../merge_sort_double.cpp:50: first defined here
+/bin/ld: obj/merge_sort.o: in function `merge_sort_iterative(hls::stream<ap_uint<8>, 0>&, hls::stream<ap_uint<8>, 0>&)':
+/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort/hls/csim/build/../../../../merge_sort.cpp:55: multiple definition of `merge_sort_iterative(hls::stream<ap_uint<8>, 0>&, hls::stream<ap_uint<8>, 0>&)'; obj/merge_sort_double.o:/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort/hls/csim/build/../../../../merge_sort_double.cpp:58: first defined here
+collect2: error: ld returned 1 exit status
+make: *** [Makefile.rules:318: csim.exe] Error 1
+ERR: [SIM 100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 3] *************** CSIM finish ***************

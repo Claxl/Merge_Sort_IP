@@ -1,0 +1,14 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "merge_sort",
+      "type": "gdb",
+      "request": "launch",
+      "target": "${workspaceFolder}/merge_sort/merge_sort/hls/csim/build/csim.exe",
+      "cwd": "${workspaceFolder}/merge_sort/merge_sort/hls/csim/build",
+      "gdbpath": "${env:XILINX_HLS}/tps/lnx64/gdb-9.2/bin/gdb",
+      "valuesFormatting": "prettyPrinters"
+    }
+  ]
+}

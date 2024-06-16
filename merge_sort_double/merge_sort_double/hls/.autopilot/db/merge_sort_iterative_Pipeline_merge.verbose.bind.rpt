@@ -1,0 +1,977 @@
+
+
+================================================================
+== Vitis HLS Report for 'merge_sort_iterative_Pipeline_merge'
+================================================================
+* Date:           Sat Jun  8 17:57:47 2024
+
+* Version:        2023.2 (Build 4023990 on Oct 11 2023)
+* Project:        merge_sort_double
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.073 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |          |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- merge   |        ?|        ?|         3|          1|          1|     ?|       yes|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 3
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 3
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 3, States = { 1 2 3 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 6.07>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%left_val = alloca i32 1" [/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:5->/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:90]   --->   Operation 6 'alloca' 'left_val' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%right_val = alloca i32 1" [/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:5->/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:90]   --->   Operation 7 'alloca' 'right_val' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %temp_stream, void @empty_10, i32 0, i32 0, void @empty_21, i32 0, i32 0, void @empty_21, void @empty_21, void @empty_21, i32 0, i32 0, i32 0, i32 0, void @empty_21, void @empty_21, i32 4294967295, i32 0"   --->   Operation 8 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %right_stream, void @empty_10, i32 0, i32 0, void @empty_21, i32 0, i32 0, void @empty_21, void @empty_21, void @empty_21, i32 0, i32 0, i32 0, i32 0, void @empty_21, void @empty_21, i32 4294967295, i32 0"   --->   Operation 9 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %left_stream, void @empty_10, i32 0, i32 0, void @empty_21, i32 0, i32 0, void @empty_21, void @empty_21, void @empty_21, i32 0, i32 0, i32 0, i32 0, void @empty_21, void @empty_21, i32 4294967295, i32 0"   --->   Operation 10 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (1.58ns)   --->   "%br_ln0 = br void %while.body.i"   --->   Operation 11 'br' 'br_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%left_empty = phi i1 1, void %newFuncRoot, i1 %left_empty_2, void %if.end18.i"   --->   Operation 12 'phi' 'left_empty' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%right_empty = phi i1 1, void %newFuncRoot, i1 %right_empty_2, void %if.end18.i"   --->   Operation 13 'phi' 'right_empty' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%specpipeline_ln9 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_21" [/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:9->/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:90]   --->   Operation 14 'specpipeline' 'specpipeline_ln9' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%specloopname_ln8 = specloopname void @_ssdm_op_SpecLoopName, void @empty_15" [/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:8->/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:90]   --->   Operation 15 'specloopname' 'specloopname_ln8' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (1.58ns)   --->   "%br_ln10 = br i1 %left_empty, void %if.end.i, void %land.lhs.true.i" [/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:10->/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:90]   --->   Operation 16 'br' 'br_ln10' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%tmp_9 = nbreadreq i1 @_ssdm_op_NbReadReq.ap_fifo.i8P0A, i8 %left_stream, i32 1" [/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:10->/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:90]   --->   Operation 17 'nbreadreq' 'tmp_9' <Predicate = (left_empty)> <Delay = 0.00> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 3.50> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1024> <FIFO>
+ST_1 : Operation 18 [1/1] (1.58ns)   --->   "%br_ln10 = br i1 %tmp_9, void %if.end.i, void %if.then.i" [/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:10->/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:90]   --->   Operation 18 'br' 'br_ln10' <Predicate = (left_empty)> <Delay = 1.58>
+ST_1 : Operation 19 [1/1] (3.50ns)   --->   "%left_val_1 = read i8 @_ssdm_op_Read.ap_fifo.volatile.i8P0A, i8 %left_stream" [/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:11->/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:90]   --->   Operation 19 'read' 'left_val_1' <Predicate = (left_empty & tmp_9)> <Delay = 3.50> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 3.50> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1024> <FIFO>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%store_ln5 = store i8 %left_val_1, i8 %left_val" [/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:5->/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:90]   --->   Operation 20 'store' 'store_ln5' <Predicate = (left_empty & tmp_9)> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (1.58ns)   --->   "%br_ln13 = br void %if.end.i" [/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:13->/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:90]   --->   Operation 21 'br' 'br_ln13' <Predicate = (left_empty & tmp_9)> <Delay = 1.58>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%left_empty_1 = phi i1 0, void %if.then.i, i1 0, void %while.body.i, i1 1, void %land.lhs.true.i"   --->   Operation 22 'phi' 'left_empty_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (1.58ns)   --->   "%br_ln14 = br i1 %right_empty, void %if.end5.i, void %land.lhs.true1.i" [/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:14->/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:90]   --->   Operation 23 'br' 'br_ln14' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%tmp_s = nbreadreq i1 @_ssdm_op_NbReadReq.ap_fifo.i8P0A, i8 %right_stream, i32 1" [/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:14->/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:90]   --->   Operation 24 'nbreadreq' 'tmp_s' <Predicate = (right_empty)> <Delay = 0.00> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 3.50> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1024> <FIFO>
+ST_1 : Operation 25 [1/1] (1.58ns)   --->   "%br_ln14 = br i1 %tmp_s, void %if.end5.i, void %if.then3.i" [/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:14->/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:90]   --->   Operation 25 'br' 'br_ln14' <Predicate = (right_empty)> <Delay = 1.58>
+ST_1 : Operation 26 [1/1] (3.50ns)   --->   "%right_val_1 = read i8 @_ssdm_op_Read.ap_fifo.volatile.i8P0A, i8 %right_stream" [/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:15->/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:90]   --->   Operation 26 'read' 'right_val_1' <Predicate = (right_empty & tmp_s)> <Delay = 3.50> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 3.50> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1024> <FIFO>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%store_ln5 = store i8 %right_val_1, i8 %right_val" [/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:5->/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:90]   --->   Operation 27 'store' 'store_ln5' <Predicate = (right_empty & tmp_s)> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (1.58ns)   --->   "%br_ln17 = br void %if.end5.i" [/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:17->/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:90]   --->   Operation 28 'br' 'br_ln17' <Predicate = (right_empty & tmp_s)> <Delay = 1.58>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%right_empty_1 = phi i1 0, void %if.then3.i, i1 0, void %if.end.i, i1 1, void %land.lhs.true1.i"   --->   Operation 29 'phi' 'right_empty_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.97ns)   --->   "%or_ln19 = or i1 %left_empty_1, i1 %right_empty_1" [/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:19->/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:90]   --->   Operation 30 'or' 'or_ln19' <Predicate = true> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%br_ln19 = br i1 %or_ln19, void %if.then7.i, void %if.else11.i" [/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:19->/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:90]   --->   Operation 31 'br' 'br_ln19' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%br_ln27 = br i1 %left_empty_1, void %if.then12.i, void %if.else13.i" [/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:27->/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:90]   --->   Operation 32 'br' 'br_ln27' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (1.70ns)   --->   "%br_ln30 = br void %if.end18.i" [/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:30->/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:90]   --->   Operation 33 'br' 'br_ln30' <Predicate = (!left_empty_1)> <Delay = 1.70>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%br_ln30 = br i1 %right_empty_1, void %if.end16.i, void %_Z20merge_sort_primitiveRN3hls6streamI7ap_uintILi8EELi0EEES4_S4_.exit.exitStub" [/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:30->/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:90]   --->   Operation 34 'br' 'br_ln30' <Predicate = (left_empty_1)> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (1.70ns)   --->   "%br_ln0 = br void %if.end18.i"   --->   Operation 35 'br' 'br_ln0' <Predicate = (left_empty_1 & !right_empty_1)> <Delay = 1.70>
+
+State 2 <SV = 1> <Delay = 5.21>
+ST_2 : Operation 36 [1/1] (0.00ns)   --->   "%left_val_2 = load i8 %left_val" [/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:28->/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:90]   --->   Operation 36 'load' 'left_val_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 37 [1/1] (0.00ns)   --->   "%right_val_2 = load i8 %right_val" [/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:24->/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:90]   --->   Operation 37 'load' 'right_val_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 38 [1/1] (1.91ns)   --->   "%icmp_ln20 = icmp_ugt  i8 %left_val_2, i8 %right_val_2" [/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:20->/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:90]   --->   Operation 38 'icmp' 'icmp_ln20' <Predicate = (!or_ln19)> <Delay = 1.91> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 39 [1/1] (0.00ns)   --->   "%br_ln20 = br i1 %icmp_ln20, void %if.then9.i, void %if.else.i" [/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:20->/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:90]   --->   Operation 39 'br' 'br_ln20' <Predicate = (!or_ln19)> <Delay = 0.00>
+ST_2 : Operation 40 [1/1] (1.70ns)   --->   "%br_ln23 = br void %if.end18.i" [/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:23->/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:90]   --->   Operation 40 'br' 'br_ln23' <Predicate = (!or_ln19 & !icmp_ln20)> <Delay = 1.70>
+ST_2 : Operation 41 [1/1] (1.70ns)   --->   "%br_ln0 = br void %if.end18.i"   --->   Operation 41 'br' 'br_ln0' <Predicate = (!or_ln19 & icmp_ln20)> <Delay = 1.70>
+ST_2 : Operation 42 [1/1] (0.00ns)   --->   "%left_empty_2 = phi i1 1, void %if.then9.i, i1 0, void %if.else.i, i1 1, void %if.end16.i, i1 1, void %if.then12.i"   --->   Operation 42 'phi' 'left_empty_2' <Predicate = (!right_empty_1) | (!left_empty_1) | (!or_ln19)> <Delay = 0.00>
+ST_2 : Operation 43 [1/1] (0.00ns)   --->   "%right_empty_2 = phi i1 0, void %if.then9.i, i1 1, void %if.else.i, i1 1, void %if.end16.i, i1 %right_empty_1, void %if.then12.i"   --->   Operation 43 'phi' 'right_empty_2' <Predicate = (!right_empty_1) | (!left_empty_1) | (!or_ln19)> <Delay = 0.00>
+ST_2 : Operation 44 [1/1] (0.00ns)   --->   "%br_ln8 = br void %while.body.i" [/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:8->/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:90]   --->   Operation 44 'br' 'br_ln8' <Predicate = (!right_empty_1) | (!left_empty_1) | (!or_ln19)> <Delay = 0.00>
+ST_2 : Operation 49 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 49 'ret' 'ret_ln0' <Predicate = (left_empty_1 & right_empty_1)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 3.50>
+ST_3 : Operation 45 [1/1] (3.50ns)   --->   "%write_ln21 = write void @_ssdm_op_Write.ap_fifo.volatile.i8P0A, i8 %temp_stream, i8 %left_val_2" [/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:21->/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:90]   --->   Operation 45 'write' 'write_ln21' <Predicate = (!or_ln19 & !icmp_ln20)> <Delay = 3.50> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 3.50> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1024> <FIFO>
+ST_3 : Operation 46 [1/1] (3.50ns)   --->   "%write_ln24 = write void @_ssdm_op_Write.ap_fifo.volatile.i8P0A, i8 %temp_stream, i8 %right_val_2" [/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:24->/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:90]   --->   Operation 46 'write' 'write_ln24' <Predicate = (!or_ln19 & icmp_ln20)> <Delay = 3.50> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 3.50> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1024> <FIFO>
+ST_3 : Operation 47 [1/1] (3.50ns)   --->   "%write_ln28 = write void @_ssdm_op_Write.ap_fifo.volatile.i8P0A, i8 %temp_stream, i8 %left_val_2" [/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:28->/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:90]   --->   Operation 47 'write' 'write_ln28' <Predicate = (!left_empty_1)> <Delay = 3.50> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 3.50> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1024> <FIFO>
+ST_3 : Operation 48 [1/1] (3.50ns)   --->   "%write_ln31 = write void @_ssdm_op_Write.ap_fifo.volatile.i8P0A, i8 %temp_stream, i8 %right_val_2" [/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:31->/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:90]   --->   Operation 48 'write' 'write_ln31' <Predicate = (left_empty_1 & !right_empty_1)> <Delay = 3.50> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 3.50> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1024> <FIFO>
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+STG Binding: 
+---------------- STG Properties BEGIN ----------------
+- Is combinational: 0
+- Is one-state seq: 0
+- Is datapath-only: 0
+- Is pipelined: 0
+- Is top level: 0
+Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
+Port [ temp_stream]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ left_stream]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ right_stream]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+---------------- STG Properties END ------------------
+
+---------------- Datapath Model BEGIN ----------------
+
+<LifeTime>
+<method=bitvector/>
+left_val          (alloca       ) [ 0110]
+right_val         (alloca       ) [ 0110]
+specinterface_ln0 (specinterface) [ 0000]
+specinterface_ln0 (specinterface) [ 0000]
+specinterface_ln0 (specinterface) [ 0000]
+br_ln0            (br           ) [ 0000]
+left_empty        (phi          ) [ 0111]
+right_empty       (phi          ) [ 0111]
+specpipeline_ln9  (specpipeline ) [ 0000]
+specloopname_ln8  (specloopname ) [ 0000]
+br_ln10           (br           ) [ 0000]
+tmp_9             (nbreadreq    ) [ 0111]
+br_ln10           (br           ) [ 0000]
+left_val_1        (read         ) [ 0000]
+store_ln5         (store        ) [ 0000]
+br_ln13           (br           ) [ 0000]
+left_empty_1      (phi          ) [ 0111]
+br_ln14           (br           ) [ 0000]
+tmp_s             (nbreadreq    ) [ 0111]
+br_ln14           (br           ) [ 0000]
+right_val_1       (read         ) [ 0000]
+store_ln5         (store        ) [ 0000]
+br_ln17           (br           ) [ 0000]
+right_empty_1     (phi          ) [ 0111]
+or_ln19           (or           ) [ 0111]
+br_ln19           (br           ) [ 0000]
+br_ln27           (br           ) [ 0000]
+br_ln30           (br           ) [ 0110]
+br_ln30           (br           ) [ 0000]
+br_ln0            (br           ) [ 0110]
+left_val_2        (load         ) [ 0101]
+right_val_2       (load         ) [ 0101]
+icmp_ln20         (icmp         ) [ 0111]
+br_ln20           (br           ) [ 0000]
+br_ln23           (br           ) [ 0000]
+br_ln0            (br           ) [ 0000]
+left_empty_2      (phi          ) [ 0110]
+right_empty_2     (phi          ) [ 0110]
+br_ln8            (br           ) [ 0110]
+write_ln21        (write        ) [ 0000]
+write_ln24        (write        ) [ 0000]
+write_ln28        (write        ) [ 0000]
+write_ln31        (write        ) [ 0000]
+ret_ln0           (ret          ) [ 0000]
+</LifeTime>
+
+<model>
+
+<comp_list>
+<comp id="0" class="1000" name="temp_stream">
+<pin_list>
+<pin id="1" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="temp_stream"/></StgValue>
+</bind>
+</comp>
+
+<comp id="2" class="1000" name="left_stream">
+<pin_list>
+<pin id="3" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="left_stream"/></StgValue>
+</bind>
+</comp>
+
+<comp id="4" class="1000" name="right_stream">
+<pin_list>
+<pin id="5" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="right_stream"/></StgValue>
+</bind>
+</comp>
+
+<comp id="6" class="1001" name="const_6">
+<pin_list>
+<pin id="7" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="8" class="1001" name="const_8">
+<pin_list>
+<pin id="9" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecInterface"/></StgValue>
+</bind>
+</comp>
+
+<comp id="10" class="1001" name="const_10">
+<pin_list>
+<pin id="11" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_10"/></StgValue>
+</bind>
+</comp>
+
+<comp id="12" class="1001" name="const_12">
+<pin_list>
+<pin id="13" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="14" class="1001" name="const_14">
+<pin_list>
+<pin id="15" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_21"/></StgValue>
+</bind>
+</comp>
+
+<comp id="16" class="1001" name="const_16">
+<pin_list>
+<pin id="17" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="18" class="1001" name="const_18">
+<pin_list>
+<pin id="19" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="20" class="1001" name="const_20">
+<pin_list>
+<pin id="21" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecPipeline"/></StgValue>
+</bind>
+</comp>
+
+<comp id="22" class="1001" name="const_22">
+<pin_list>
+<pin id="23" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecLoopName"/></StgValue>
+</bind>
+</comp>
+
+<comp id="24" class="1001" name="const_24">
+<pin_list>
+<pin id="25" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_15"/></StgValue>
+</bind>
+</comp>
+
+<comp id="26" class="1001" name="const_26">
+<pin_list>
+<pin id="27" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_NbReadReq.ap_fifo.i8P0A"/></StgValue>
+</bind>
+</comp>
+
+<comp id="28" class="1001" name="const_28">
+<pin_list>
+<pin id="29" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Read.ap_fifo.volatile.i8P0A"/></StgValue>
+</bind>
+</comp>
+
+<comp id="30" class="1001" name="const_30">
+<pin_list>
+<pin id="31" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="32" class="1001" name="const_32">
+<pin_list>
+<pin id="33" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Write.ap_fifo.volatile.i8P0A"/></StgValue>
+</bind>
+</comp>
+
+<comp id="34" class="1004" name="left_val_fu_34">
+<pin_list>
+<pin id="35" dir="0" index="0" bw="1" slack="0"/>
+<pin id="36" dir="1" index="1" bw="8" slack="0"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="left_val/1 "/>
+</bind>
+</comp>
+
+<comp id="38" class="1004" name="right_val_fu_38">
+<pin_list>
+<pin id="39" dir="0" index="0" bw="1" slack="0"/>
+<pin id="40" dir="1" index="1" bw="8" slack="0"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="right_val/1 "/>
+</bind>
+</comp>
+
+<comp id="42" class="1004" name="tmp_9_nbreadreq_fu_42">
+<pin_list>
+<pin id="43" dir="0" index="0" bw="1" slack="0"/>
+<pin id="44" dir="0" index="1" bw="8" slack="0"/>
+<pin id="45" dir="0" index="2" bw="1" slack="0"/>
+<pin id="46" dir="1" index="3" bw="1" slack="1"/>
+</pin_list>
+<bind>
+<opcode="nbreadreq(1156) " fcode="nbreadreq"/>
+<opset="tmp_9/1 "/>
+</bind>
+</comp>
+
+<comp id="50" class="1004" name="left_val_1_read_fu_50">
+<pin_list>
+<pin id="51" dir="0" index="0" bw="8" slack="0"/>
+<pin id="52" dir="0" index="1" bw="8" slack="0"/>
+<pin id="53" dir="1" index="2" bw="8" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="left_val_1/1 "/>
+</bind>
+</comp>
+
+<comp id="56" class="1004" name="tmp_s_nbreadreq_fu_56">
+<pin_list>
+<pin id="57" dir="0" index="0" bw="1" slack="0"/>
+<pin id="58" dir="0" index="1" bw="8" slack="0"/>
+<pin id="59" dir="0" index="2" bw="1" slack="0"/>
+<pin id="60" dir="1" index="3" bw="1" slack="1"/>
+</pin_list>
+<bind>
+<opcode="nbreadreq(1156) " fcode="nbreadreq"/>
+<opset="tmp_s/1 "/>
+</bind>
+</comp>
+
+<comp id="64" class="1004" name="right_val_1_read_fu_64">
+<pin_list>
+<pin id="65" dir="0" index="0" bw="8" slack="0"/>
+<pin id="66" dir="0" index="1" bw="8" slack="0"/>
+<pin id="67" dir="1" index="2" bw="8" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="right_val_1/1 "/>
+</bind>
+</comp>
+
+<comp id="70" class="1004" name="grp_write_fu_70">
+<pin_list>
+<pin id="71" dir="0" index="0" bw="0" slack="0"/>
+<pin id="72" dir="0" index="1" bw="8" slack="0"/>
+<pin id="73" dir="0" index="2" bw="8" slack="1"/>
+<pin id="74" dir="1" index="3" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="write(1151) " fcode="write"/>
+<opset="write_ln21/3 write_ln24/3 write_ln28/3 write_ln31/3 "/>
+</bind>
+</comp>
+
+<comp id="77" class="1005" name="left_empty_reg_77">
+<pin_list>
+<pin id="78" dir="0" index="0" bw="1" slack="1"/>
+<pin id="79" dir="1" index="1" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<opset="left_empty (phireg) "/>
+</bind>
+</comp>
+
+<comp id="80" class="1004" name="left_empty_phi_fu_80">
+<pin_list>
+<pin id="81" dir="0" index="0" bw="1" slack="0"/>
+<pin id="82" dir="0" index="1" bw="0" slack="2147483647"/>
+<pin id="83" dir="0" index="2" bw="1" slack="1"/>
+<pin id="84" dir="0" index="3" bw="0" slack="2147483647"/>
+<pin id="85" dir="1" index="4" bw="1" slack="1"/>
+</pin_list>
+<bind>
+<opcode="phi(47) " fcode="phi"/>
+<opset="left_empty/1 "/>
+</bind>
+</comp>
+
+<comp id="88" class="1005" name="right_empty_reg_88">
+<pin_list>
+<pin id="89" dir="0" index="0" bw="1" slack="1"/>
+<pin id="90" dir="1" index="1" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<opset="right_empty (phireg) "/>
+</bind>
+</comp>
+
+<comp id="91" class="1004" name="right_empty_phi_fu_91">
+<pin_list>
+<pin id="92" dir="0" index="0" bw="1" slack="0"/>
+<pin id="93" dir="0" index="1" bw="0" slack="2147483647"/>
+<pin id="94" dir="0" index="2" bw="1" slack="1"/>
+<pin id="95" dir="0" index="3" bw="0" slack="2147483647"/>
+<pin id="96" dir="1" index="4" bw="1" slack="1"/>
+</pin_list>
+<bind>
+<opcode="phi(47) " fcode="phi"/>
+<opset="right_empty/1 "/>
+</bind>
+</comp>
+
+<comp id="99" class="1005" name="left_empty_1_reg_99">
+<pin_list>
+<pin id="100" dir="0" index="0" bw="1" slack="1"/>
+<pin id="101" dir="1" index="1" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<opset="left_empty_1 (phireg) "/>
+</bind>
+</comp>
+
+<comp id="102" class="1004" name="left_empty_1_phi_fu_102">
+<pin_list>
+<pin id="103" dir="0" index="0" bw="1" slack="0"/>
+<pin id="104" dir="0" index="1" bw="0" slack="2147483647"/>
+<pin id="105" dir="0" index="2" bw="1" slack="0"/>
+<pin id="106" dir="0" index="3" bw="0" slack="2147483647"/>
+<pin id="107" dir="0" index="4" bw="1" slack="0"/>
+<pin id="108" dir="0" index="5" bw="0" slack="2147483647"/>
+<pin id="109" dir="1" index="6" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<opcode="phi(47) " fcode="phi"/>
+<opset="left_empty_1/1 "/>
+</bind>
+</comp>
+
+<comp id="114" class="1005" name="right_empty_1_reg_114">
+<pin_list>
+<pin id="115" dir="0" index="0" bw="1" slack="1"/>
+<pin id="116" dir="1" index="1" bw="1" slack="1"/>
+</pin_list>
+<bind>
+<opset="right_empty_1 (phireg) "/>
+</bind>
+</comp>
+
+<comp id="117" class="1004" name="right_empty_1_phi_fu_117">
+<pin_list>
+<pin id="118" dir="0" index="0" bw="1" slack="0"/>
+<pin id="119" dir="0" index="1" bw="0" slack="2147483647"/>
+<pin id="120" dir="0" index="2" bw="1" slack="0"/>
+<pin id="121" dir="0" index="3" bw="0" slack="2147483647"/>
+<pin id="122" dir="0" index="4" bw="1" slack="0"/>
+<pin id="123" dir="0" index="5" bw="0" slack="2147483647"/>
+<pin id="124" dir="1" index="6" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<opcode="phi(47) " fcode="phi"/>
+<opset="right_empty_1/1 "/>
+</bind>
+</comp>
+
+<comp id="129" class="1005" name="left_empty_2_reg_129">
+<pin_list>
+<pin id="130" dir="0" index="0" bw="1" slack="1"/>
+<pin id="131" dir="1" index="1" bw="1" slack="1"/>
+</pin_list>
+<bind>
+<opset="left_empty_2 (phireg) "/>
+</bind>
+</comp>
+
+<comp id="134" class="1004" name="left_empty_2_phi_fu_134">
+<pin_list>
+<pin id="135" dir="0" index="0" bw="1" slack="0"/>
+<pin id="136" dir="0" index="1" bw="0" slack="2147483647"/>
+<pin id="137" dir="0" index="2" bw="1" slack="0"/>
+<pin id="138" dir="0" index="3" bw="0" slack="2147483647"/>
+<pin id="139" dir="0" index="4" bw="1" slack="1"/>
+<pin id="140" dir="0" index="5" bw="0" slack="2147483647"/>
+<pin id="141" dir="0" index="6" bw="1" slack="1"/>
+<pin id="142" dir="0" index="7" bw="0" slack="2147483647"/>
+<pin id="143" dir="1" index="8" bw="1" slack="1"/>
+</pin_list>
+<bind>
+<opcode="phi(47) " fcode="phi"/>
+<opset="left_empty_2/2 "/>
+</bind>
+</comp>
+
+<comp id="149" class="1005" name="right_empty_2_reg_149">
+<pin_list>
+<pin id="150" dir="0" index="0" bw="1" slack="1"/>
+<pin id="151" dir="1" index="1" bw="1" slack="1"/>
+</pin_list>
+<bind>
+<opset="right_empty_2 (phireg) "/>
+</bind>
+</comp>
+
+<comp id="154" class="1004" name="right_empty_2_phi_fu_154">
+<pin_list>
+<pin id="155" dir="0" index="0" bw="1" slack="0"/>
+<pin id="156" dir="0" index="1" bw="0" slack="2147483647"/>
+<pin id="157" dir="0" index="2" bw="1" slack="0"/>
+<pin id="158" dir="0" index="3" bw="0" slack="2147483647"/>
+<pin id="159" dir="0" index="4" bw="1" slack="1"/>
+<pin id="160" dir="0" index="5" bw="0" slack="2147483647"/>
+<pin id="161" dir="0" index="6" bw="1" slack="1"/>
+<pin id="162" dir="0" index="7" bw="0" slack="2147483647"/>
+<pin id="163" dir="1" index="8" bw="1" slack="1"/>
+</pin_list>
+<bind>
+<opcode="phi(47) " fcode="phi"/>
+<opset="right_empty_2/2 "/>
+</bind>
+</comp>
+
+<comp id="169" class="1004" name="store_ln5_store_fu_169">
+<pin_list>
+<pin id="170" dir="0" index="0" bw="8" slack="0"/>
+<pin id="171" dir="0" index="1" bw="8" slack="0"/>
+<pin id="172" dir="1" index="2" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="store(28) " fcode="store"/>
+<opset="store_ln5/1 "/>
+</bind>
+</comp>
+
+<comp id="174" class="1004" name="store_ln5_store_fu_174">
+<pin_list>
+<pin id="175" dir="0" index="0" bw="8" slack="0"/>
+<pin id="176" dir="0" index="1" bw="8" slack="0"/>
+<pin id="177" dir="1" index="2" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="store(28) " fcode="store"/>
+<opset="store_ln5/1 "/>
+</bind>
+</comp>
+
+<comp id="179" class="1004" name="or_ln19_fu_179">
+<pin_list>
+<pin id="180" dir="0" index="0" bw="1" slack="0"/>
+<pin id="181" dir="0" index="1" bw="1" slack="0"/>
+<pin id="182" dir="1" index="2" bw="1" slack="1"/>
+</pin_list>
+<bind>
+<opcode="or(24) " fcode="or"/>
+<opset="or_ln19/1 "/>
+</bind>
+</comp>
+
+<comp id="185" class="1004" name="left_val_2_load_fu_185">
+<pin_list>
+<pin id="186" dir="0" index="0" bw="8" slack="1"/>
+<pin id="187" dir="1" index="1" bw="8" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="left_val_2/2 "/>
+</bind>
+</comp>
+
+<comp id="188" class="1004" name="right_val_2_load_fu_188">
+<pin_list>
+<pin id="189" dir="0" index="0" bw="8" slack="1"/>
+<pin id="190" dir="1" index="1" bw="8" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="right_val_2/2 "/>
+</bind>
+</comp>
+
+<comp id="191" class="1004" name="icmp_ln20_fu_191">
+<pin_list>
+<pin id="192" dir="0" index="0" bw="8" slack="0"/>
+<pin id="193" dir="0" index="1" bw="8" slack="0"/>
+<pin id="194" dir="1" index="2" bw="1" slack="1"/>
+</pin_list>
+<bind>
+<opcode="icmp(45) " fcode="icmp"/>
+<opset="icmp_ln20/2 "/>
+</bind>
+</comp>
+
+<comp id="197" class="1005" name="left_val_reg_197">
+<pin_list>
+<pin id="198" dir="0" index="0" bw="8" slack="0"/>
+<pin id="199" dir="1" index="1" bw="8" slack="0"/>
+</pin_list>
+<bind>
+<opset="left_val "/>
+</bind>
+</comp>
+
+<comp id="203" class="1005" name="right_val_reg_203">
+<pin_list>
+<pin id="204" dir="0" index="0" bw="8" slack="0"/>
+<pin id="205" dir="1" index="1" bw="8" slack="0"/>
+</pin_list>
+<bind>
+<opset="right_val "/>
+</bind>
+</comp>
+
+<comp id="209" class="1005" name="tmp_9_reg_209">
+<pin_list>
+<pin id="210" dir="0" index="0" bw="1" slack="1"/>
+<pin id="211" dir="1" index="1" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<opset="tmp_9 "/>
+</bind>
+</comp>
+
+<comp id="213" class="1005" name="tmp_s_reg_213">
+<pin_list>
+<pin id="214" dir="0" index="0" bw="1" slack="1"/>
+<pin id="215" dir="1" index="1" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<opset="tmp_s "/>
+</bind>
+</comp>
+
+<comp id="217" class="1005" name="or_ln19_reg_217">
+<pin_list>
+<pin id="218" dir="0" index="0" bw="1" slack="1"/>
+<pin id="219" dir="1" index="1" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<opset="or_ln19 "/>
+</bind>
+</comp>
+
+<comp id="221" class="1005" name="left_val_2_reg_221">
+<pin_list>
+<pin id="222" dir="0" index="0" bw="8" slack="1"/>
+<pin id="223" dir="1" index="1" bw="8" slack="1"/>
+</pin_list>
+<bind>
+<opset="left_val_2 "/>
+</bind>
+</comp>
+
+<comp id="226" class="1005" name="right_val_2_reg_226">
+<pin_list>
+<pin id="227" dir="0" index="0" bw="8" slack="1"/>
+<pin id="228" dir="1" index="1" bw="8" slack="1"/>
+</pin_list>
+<bind>
+<opset="right_val_2 "/>
+</bind>
+</comp>
+
+<comp id="231" class="1005" name="icmp_ln20_reg_231">
+<pin_list>
+<pin id="232" dir="0" index="0" bw="1" slack="1"/>
+<pin id="233" dir="1" index="1" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<opset="icmp_ln20 "/>
+</bind>
+</comp>
+
+</comp_list>
+
+<net_list>
+<net id="37"><net_src comp="6" pin="0"/><net_sink comp="34" pin=0"/></net>
+
+<net id="41"><net_src comp="6" pin="0"/><net_sink comp="38" pin=0"/></net>
+
+<net id="47"><net_src comp="26" pin="0"/><net_sink comp="42" pin=0"/></net>
+
+<net id="48"><net_src comp="2" pin="0"/><net_sink comp="42" pin=1"/></net>
+
+<net id="49"><net_src comp="6" pin="0"/><net_sink comp="42" pin=2"/></net>
+
+<net id="54"><net_src comp="28" pin="0"/><net_sink comp="50" pin=0"/></net>
+
+<net id="55"><net_src comp="2" pin="0"/><net_sink comp="50" pin=1"/></net>
+
+<net id="61"><net_src comp="26" pin="0"/><net_sink comp="56" pin=0"/></net>
+
+<net id="62"><net_src comp="4" pin="0"/><net_sink comp="56" pin=1"/></net>
+
+<net id="63"><net_src comp="6" pin="0"/><net_sink comp="56" pin=2"/></net>
+
+<net id="68"><net_src comp="28" pin="0"/><net_sink comp="64" pin=0"/></net>
+
+<net id="69"><net_src comp="4" pin="0"/><net_sink comp="64" pin=1"/></net>
+
+<net id="75"><net_src comp="32" pin="0"/><net_sink comp="70" pin=0"/></net>
+
+<net id="76"><net_src comp="0" pin="0"/><net_sink comp="70" pin=1"/></net>
+
+<net id="86"><net_src comp="18" pin="0"/><net_sink comp="80" pin=0"/></net>
+
+<net id="87"><net_src comp="80" pin="4"/><net_sink comp="77" pin=0"/></net>
+
+<net id="97"><net_src comp="18" pin="0"/><net_sink comp="91" pin=0"/></net>
+
+<net id="98"><net_src comp="91" pin="4"/><net_sink comp="88" pin=0"/></net>
+
+<net id="110"><net_src comp="30" pin="0"/><net_sink comp="102" pin=0"/></net>
+
+<net id="111"><net_src comp="30" pin="0"/><net_sink comp="102" pin=2"/></net>
+
+<net id="112"><net_src comp="18" pin="0"/><net_sink comp="102" pin=4"/></net>
+
+<net id="113"><net_src comp="102" pin="6"/><net_sink comp="99" pin=0"/></net>
+
+<net id="125"><net_src comp="30" pin="0"/><net_sink comp="117" pin=0"/></net>
+
+<net id="126"><net_src comp="30" pin="0"/><net_sink comp="117" pin=2"/></net>
+
+<net id="127"><net_src comp="18" pin="0"/><net_sink comp="117" pin=4"/></net>
+
+<net id="128"><net_src comp="117" pin="6"/><net_sink comp="114" pin=0"/></net>
+
+<net id="132"><net_src comp="18" pin="0"/><net_sink comp="129" pin=0"/></net>
+
+<net id="133"><net_src comp="129" pin="1"/><net_sink comp="80" pin=2"/></net>
+
+<net id="144"><net_src comp="18" pin="0"/><net_sink comp="134" pin=0"/></net>
+
+<net id="145"><net_src comp="30" pin="0"/><net_sink comp="134" pin=2"/></net>
+
+<net id="146"><net_src comp="129" pin="1"/><net_sink comp="134" pin=4"/></net>
+
+<net id="147"><net_src comp="129" pin="1"/><net_sink comp="134" pin=6"/></net>
+
+<net id="148"><net_src comp="134" pin="8"/><net_sink comp="129" pin=0"/></net>
+
+<net id="152"><net_src comp="18" pin="0"/><net_sink comp="149" pin=0"/></net>
+
+<net id="153"><net_src comp="149" pin="1"/><net_sink comp="91" pin=2"/></net>
+
+<net id="164"><net_src comp="30" pin="0"/><net_sink comp="154" pin=0"/></net>
+
+<net id="165"><net_src comp="18" pin="0"/><net_sink comp="154" pin=2"/></net>
+
+<net id="166"><net_src comp="149" pin="1"/><net_sink comp="154" pin=4"/></net>
+
+<net id="167"><net_src comp="114" pin="1"/><net_sink comp="154" pin=6"/></net>
+
+<net id="168"><net_src comp="154" pin="8"/><net_sink comp="149" pin=0"/></net>
+
+<net id="173"><net_src comp="50" pin="2"/><net_sink comp="169" pin=0"/></net>
+
+<net id="178"><net_src comp="64" pin="2"/><net_sink comp="174" pin=0"/></net>
+
+<net id="183"><net_src comp="102" pin="6"/><net_sink comp="179" pin=0"/></net>
+
+<net id="184"><net_src comp="117" pin="6"/><net_sink comp="179" pin=1"/></net>
+
+<net id="195"><net_src comp="185" pin="1"/><net_sink comp="191" pin=0"/></net>
+
+<net id="196"><net_src comp="188" pin="1"/><net_sink comp="191" pin=1"/></net>
+
+<net id="200"><net_src comp="34" pin="1"/><net_sink comp="197" pin=0"/></net>
+
+<net id="201"><net_src comp="197" pin="1"/><net_sink comp="169" pin=1"/></net>
+
+<net id="202"><net_src comp="197" pin="1"/><net_sink comp="185" pin=0"/></net>
+
+<net id="206"><net_src comp="38" pin="1"/><net_sink comp="203" pin=0"/></net>
+
+<net id="207"><net_src comp="203" pin="1"/><net_sink comp="174" pin=1"/></net>
+
+<net id="208"><net_src comp="203" pin="1"/><net_sink comp="188" pin=0"/></net>
+
+<net id="212"><net_src comp="42" pin="3"/><net_sink comp="209" pin=0"/></net>
+
+<net id="216"><net_src comp="56" pin="3"/><net_sink comp="213" pin=0"/></net>
+
+<net id="220"><net_src comp="179" pin="2"/><net_sink comp="217" pin=0"/></net>
+
+<net id="224"><net_src comp="185" pin="1"/><net_sink comp="221" pin=0"/></net>
+
+<net id="225"><net_src comp="221" pin="1"/><net_sink comp="70" pin=2"/></net>
+
+<net id="229"><net_src comp="188" pin="1"/><net_sink comp="226" pin=0"/></net>
+
+<net id="230"><net_src comp="226" pin="1"/><net_sink comp="70" pin=2"/></net>
+
+<net id="234"><net_src comp="191" pin="2"/><net_sink comp="231" pin=0"/></net>
+
+</net_list>
+
+</model> 
+---------------- Datapath Model END ------------------
+
+* FSMD analyzer results:
+  - Output states:
+	Port: temp_stream | {3 }
+ - Input state : 
+	Port: merge_sort_iterative_Pipeline_merge : left_stream | {1 }
+	Port: merge_sort_iterative_Pipeline_merge : right_stream | {1 }
+  - Chain level:
+	State 1
+		left_empty : 1
+		right_empty : 1
+		br_ln10 : 2
+		left_empty_1 : 3
+		br_ln14 : 2
+		right_empty_1 : 3
+		or_ln19 : 4
+		br_ln19 : 4
+		br_ln27 : 4
+		br_ln30 : 4
+	State 2
+		icmp_ln20 : 1
+		br_ln20 : 2
+		left_empty_2 : 1
+		right_empty_2 : 1
+	State 3
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+
+* Functional unit list:
+|----------|------------------------|---------|---------|
+| Operation|     Functional Unit    |    FF   |   LUT   |
+|----------|------------------------|---------|---------|
+|   icmp   |    icmp_ln20_fu_191    |    0    |    15   |
+|----------|------------------------|---------|---------|
+|    or    |     or_ln19_fu_179     |    0    |    2    |
+|----------|------------------------|---------|---------|
+| nbreadreq|  tmp_9_nbreadreq_fu_42 |    0    |    0    |
+|          |  tmp_s_nbreadreq_fu_56 |    0    |    0    |
+|----------|------------------------|---------|---------|
+|   read   |  left_val_1_read_fu_50 |    0    |    0    |
+|          | right_val_1_read_fu_64 |    0    |    0    |
+|----------|------------------------|---------|---------|
+|   write  |     grp_write_fu_70    |    0    |    0    |
+|----------|------------------------|---------|---------|
+|   Total  |                        |    0    |    17   |
+|----------|------------------------|---------|---------|
+
+Memories:
+N/A
+
+* Register list:
++---------------------+--------+
+|                     |   FF   |
++---------------------+--------+
+|  icmp_ln20_reg_231  |    1   |
+| left_empty_1_reg_99 |    1   |
+| left_empty_2_reg_129|    1   |
+|  left_empty_reg_77  |    1   |
+|  left_val_2_reg_221 |    8   |
+|   left_val_reg_197  |    8   |
+|   or_ln19_reg_217   |    1   |
+|right_empty_1_reg_114|    1   |
+|right_empty_2_reg_149|    1   |
+|  right_empty_reg_88 |    1   |
+| right_val_2_reg_226 |    8   |
+|  right_val_reg_203  |    8   |
+|    tmp_9_reg_209    |    1   |
+|    tmp_s_reg_213    |    1   |
++---------------------+--------+
+|        Total        |   42   |
++---------------------+--------+
+
+* Multiplexer (MUX) list: 
+|-----------------------|------|------|------|--------||---------||---------|
+|          Comp         |  Pin | Size |  BW  | S x BW ||  Delay  ||   LUT   |
+|-----------------------|------|------|------|--------||---------||---------|
+|    grp_write_fu_70    |  p2  |   2  |   8  |   16   ||    9    |
+|  left_empty_2_reg_129 |  p0  |   2  |   1  |    2   ||    9    |
+| right_empty_2_reg_149 |  p0  |   2  |   1  |    2   ||    9    |
+|-----------------------|------|------|------|--------||---------||---------|
+|         Total         |      |      |      |   20   ||  4.764  ||    27   |
+|-----------------------|------|------|------|--------||---------||---------|
+
+
+
+* Summary:
++-----------+--------+--------+--------+
+|           |  Delay |   FF   |   LUT  |
++-----------+--------+--------+--------+
+|  Function |    -   |    0   |   17   |
+|   Memory  |    -   |    -   |    -   |
+|Multiplexer|    4   |    -   |   27   |
+|  Register |    -   |   42   |    -   |
++-----------+--------+--------+--------+
+|   Total   |    4   |   42   |   44   |
++-----------+--------+--------+--------+

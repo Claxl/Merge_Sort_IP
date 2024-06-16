@@ -1,0 +1,227 @@
+<ENTRY>
+{
+ "thisFile": "/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort/merge_sort.hlsrun_cosim_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Tue May 28 19:23:12 2024",
+ "timestampMillis": "1716916992803",
+ "buildStep": {
+  "cmdId": "dbf1bfad-5521-450e-aa34-3a4acbe8bf20",
+  "name": "vitis-run",
+  "logFile": "/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort/logs/merge_sort.steps.log",
+  "commandLine": "/tools/Xilinx/Vitis/2023.2/bin/unwrapped/lnx64.o/vitis-run  --mode hls --cosim --config /home/claxl/Documents/NECSTCamp/merge_sort/hls_config.cfg --work_dir merge_sort ",
+  "args": [
+   "--mode",
+   "hls",
+   "--cosim",
+   "--config",
+   "/home/claxl/Documents/NECSTCamp/merge_sort/hls_config.cfg",
+   "--work_dir",
+   "merge_sort"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/claxl/Documents/NECSTCamp/merge_sort"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May 28 19:23:12 2024",
+ "timestampMillis": "1716916992804",
+ "status": {
+  "cmdId": "dbf1bfad-5521-450e-aa34-3a4acbe8bf20",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Tue May 28 19:23:15 2024",
+ "timestampMillis": "1716916995057",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_RTL_COSIM",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "merge_sort",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp",
+     "/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.hpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2023.2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue May 28 19:23:15 2024",
+ "timestampMillis": "1716916995058",
+ "buildStep": {
+  "cmdId": "43e2075f-6564-490d-b0a8-9125b280db9a",
+  "name": "cosim_design",
+  "logFile": "/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort/hls/hls.log",
+  "commandLine": "cosim_design",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/claxl/Documents/NECSTCamp/merge_sort"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May 28 19:23:15 2024",
+ "timestampMillis": "1716916995059",
+ "status": {
+  "cmdId": "43e2075f-6564-490d-b0a8-9125b280db9a",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May 28 19:23:15 2024",
+ "timestampMillis": "1716916995059",
+ "report": {
+  "path": "/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort/hls/sim/report/merge_sort_cosim.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "HLS_COSIMULATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May 28 19:23:15 2024",
+ "timestampMillis": "1716916995059",
+ "report": {
+  "path": "/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_DATAFLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May 28 19:23:15 2024",
+ "timestampMillis": "1716916995059",
+ "report": {
+  "path": "/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_FUNCTION_CALL_GRAPH_COSIM",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May 28 19:23:15 2024",
+ "timestampMillis": "1716916995059",
+ "report": {
+  "path": "/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_TIMELINE_TRACE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May 28 19:23:15 2024",
+ "timestampMillis": "1716916995060",
+ "report": {
+  "path": "/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_WAVE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May 28 19:23:54 2024",
+ "timestampMillis": "1716917034192",
+ "status": {
+  "cmdId": "43e2075f-6564-490d-b0a8-9125b280db9a",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May 28 19:23:54 2024",
+ "timestampMillis": "1716917034266",
+ "status": {
+  "cmdId": "dbf1bfad-5521-450e-aa34-3a4acbe8bf20",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May 28 19:23:54 2024",
+ "timestampMillis": "1716917034267",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May 28 19:23:54 2024",
+ "timestampMillis": "1716917034267",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

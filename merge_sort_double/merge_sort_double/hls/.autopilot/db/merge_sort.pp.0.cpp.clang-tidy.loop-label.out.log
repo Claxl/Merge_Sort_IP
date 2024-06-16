@@ -1,0 +1,40 @@
+/home/claxl/Documents/Double/merge_sort_double/merge_sort_double/hls/.autopilot/db/merge_sort.pp.0.cpp:1448:7: warning: Added loop label VITIS_LOOP_1207_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1207_1: 
+/home/claxl/Documents/Double/merge_sort_double/merge_sort_double/hls/.autopilot/db/merge_sort.pp.0.cpp:1448:7: note: FIX-IT applied suggested code changes
+/home/claxl/Documents/Double/merge_sort_double/merge_sort_double/hls/.autopilot/db/merge_sort.pp.0.cpp:2422:5: warning: Added loop label VITIS_LOOP_676_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_676_1: 
+/home/claxl/Documents/Double/merge_sort_double/merge_sort_double/hls/.autopilot/db/merge_sort.pp.0.cpp:2422:5: note: FIX-IT applied suggested code changes
+/home/claxl/Documents/Double/merge_sort_double/merge_sort_double/hls/.autopilot/db/merge_sort.pp.0.cpp:2436:5: warning: Added loop label VITIS_LOOP_690_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_690_1: 
+/home/claxl/Documents/Double/merge_sort_double/merge_sort_double/hls/.autopilot/db/merge_sort.pp.0.cpp:2436:5: note: FIX-IT applied suggested code changes
+/home/claxl/Documents/Double/merge_sort_double/merge_sort_double/hls/.autopilot/db/merge_sort.pp.0.cpp:2450:5: warning: Added loop label VITIS_LOOP_704_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_704_1: 
+/home/claxl/Documents/Double/merge_sort_double/merge_sort_double/hls/.autopilot/db/merge_sort.pp.0.cpp:2450:5: note: FIX-IT applied suggested code changes
+/home/claxl/Documents/Double/merge_sort_double/merge_sort_double/hls/.autopilot/db/merge_sort.pp.0.cpp:4079:7: warning: Added loop label VITIS_LOOP_1247_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1247_1: 
+/home/claxl/Documents/Double/merge_sort_double/merge_sort_double/hls/.autopilot/db/merge_sort.pp.0.cpp:4079:7: note: FIX-IT applied suggested code changes
+/home/claxl/Documents/Double/merge_sort_double/merge_sort_double/hls/.autopilot/db/merge_sort.pp.0.cpp:23651:9: warning: Added loop label VITIS_LOOP_78_1:   [xilinx-label-all-loops]
+        for (int i = 0; i < dim; i += 2 * width) {
+        ^~~
+        VITIS_LOOP_78_1: 
+/home/claxl/Documents/Double/merge_sort_double/merge_sort_double/hls/.autopilot/db/merge_sort.pp.0.cpp:23651:9: note: FIX-IT applied suggested code changes
+/home/claxl/Documents/Double/merge_sort_double/merge_sort_double/hls/.autopilot/db/merge_sort.pp.0.cpp:23681:5: warning: Added loop label VITIS_LOOP_108_1:   [xilinx-label-all-loops]
+    for(int i = 0 ; i < 1024/2; i++){
+    ^~~
+    VITIS_LOOP_108_1: 
+/home/claxl/Documents/Double/merge_sort_double/merge_sort_double/hls/.autopilot/db/merge_sort.pp.0.cpp:23681:5: note: FIX-IT applied suggested code changes
+/home/claxl/Documents/Double/merge_sort_double/merge_sort_double/hls/.autopilot/db/merge_sort.pp.0.cpp:23686:5: warning: Added loop label VITIS_LOOP_113_2:   [xilinx-label-all-loops]
+    for(int i = 0 ; i < 1024/2; i++){
+    ^~~
+    VITIS_LOOP_113_2: 
+/home/claxl/Documents/Double/merge_sort_double/merge_sort_double/hls/.autopilot/db/merge_sort.pp.0.cpp:23686:5: note: FIX-IT applied suggested code changes

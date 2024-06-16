@@ -1,0 +1,7 @@
+Running: xsim.dir/merge_sort/xsimk -simmode gui -wdb merge_sort.wdb -simrunnum 0 -socket 41493
+Design successfully loaded
+Design Loading Memory Usage: 35936 KB (Peak: 35936 KB)
+Design Loading CPU Usage: 10 ms
+Simulation completed
+Simulation Memory Usage: 122568 KB (Peak: 175204 KB)
+Simulation CPU Usage: 5680 ms

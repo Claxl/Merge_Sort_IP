@@ -1,0 +1,224 @@
+
+
+================================================================
+== Vitis HLS Report for 'merge_sort'
+================================================================
+* Date:           Sat Jun  8 17:58:01 2024
+
+* Version:        2023.2 (Build 4023990 on Oct 11 2023)
+* Project:        merge_sort_double
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.300 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+----------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
+    |   min   |   max   |    min   |    max   | min | max |   Type   |
+    +---------+---------+----------+----------+-----+-----+----------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|  dataflow|
+    +---------+---------+----------+----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 10
+* Pipeline : 0
+* Dataflow Pipeline: 1
+  DF-Pipeline-0: Size = 10, States = { 1 2 3 4 5 6 7 8 9 10 }
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 4.59>
+ST_1 : Operation 11 [1/1] (1.00ns)   --->   "%output_r_read = read i64 @_ssdm_op_Read.s_axilite.i64, i64 %output_r" [/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:133]   --->   Operation 11 'read' 'output_r_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 12 [1/1] (1.00ns)   --->   "%right_r_read = read i64 @_ssdm_op_Read.s_axilite.i64, i64 %right_r" [/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:133]   --->   Operation 12 'read' 'right_r_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 13 [1/1] (1.00ns)   --->   "%left_r_read = read i64 @_ssdm_op_Read.s_axilite.i64, i64 %left_r" [/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:133]   --->   Operation 13 'read' 'left_r_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%output_r_c = alloca i64 1" [/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:133]   --->   Operation 14 'alloca' 'output_r_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.59> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 6> <FIFO>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%left_stream = alloca i64 1" [/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:135]   --->   Operation 15 'alloca' 'left_stream' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 2> <FIFO>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%tmp_left = alloca i64 1" [/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:136]   --->   Operation 16 'alloca' 'tmp_left' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 2> <FIFO>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%right_stream = alloca i64 1" [/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:137]   --->   Operation 17 'alloca' 'right_stream' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 2> <FIFO>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%tmp_right = alloca i64 1" [/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:138]   --->   Operation 18 'alloca' 'tmp_right' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 2> <FIFO>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%tmp = alloca i64 1" [/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:139]   --->   Operation 19 'alloca' 'tmp' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 2> <FIFO>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%output_stream = alloca i64 1" [/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:140]   --->   Operation 20 'alloca' 'output_stream' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 2> <FIFO>
+ST_1 : Operation 21 [1/1] (3.59ns)   --->   "%call_ln133 = call void @entry_proc, i64 %output_r_read, i64 %output_r_c" [/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:133]   --->   Operation 21 'call' 'call_ln133' <Predicate = true> <Delay = 3.59> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 22 [2/2] (0.00ns)   --->   "%call_ln148 = call void @read_input, i8 %gmem1, i64 %left_r_read, i8 %left_stream" [/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:148]   --->   Operation 22 'call' 'call_ln148' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 23 [2/2] (0.00ns)   --->   "%call_ln149 = call void @read_input.3, i8 %gmem2, i64 %right_r_read, i8 %right_stream" [/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:149]   --->   Operation 23 'call' 'call_ln149' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 24 [1/2] (0.00ns)   --->   "%call_ln148 = call void @read_input, i8 %gmem1, i64 %left_r_read, i8 %left_stream" [/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:148]   --->   Operation 24 'call' 'call_ln148' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 25 [1/2] (0.00ns)   --->   "%call_ln149 = call void @read_input.3, i8 %gmem2, i64 %right_r_read, i8 %right_stream" [/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:149]   --->   Operation 25 'call' 'call_ln149' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 26 [2/2] (0.00ns)   --->   "%call_ln153 = call void @merge_sort_iterative.1, i8 %left_stream, i8 %tmp_left" [/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:153]   --->   Operation 26 'call' 'call_ln153' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 27 [2/2] (0.00ns)   --->   "%call_ln154 = call void @merge_sort_iterative.2, i8 %right_stream, i8 %tmp_right" [/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:154]   --->   Operation 27 'call' 'call_ln154' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 28 [1/2] (0.00ns)   --->   "%call_ln153 = call void @merge_sort_iterative.1, i8 %left_stream, i8 %tmp_left" [/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:153]   --->   Operation 28 'call' 'call_ln153' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 29 [1/2] (0.00ns)   --->   "%call_ln154 = call void @merge_sort_iterative.2, i8 %right_stream, i8 %tmp_right" [/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:154]   --->   Operation 29 'call' 'call_ln154' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 0.00>
+ST_5 : Operation 30 [2/2] (0.00ns)   --->   "%call_ln156 = call void @write_tmp, i8 %tmp_right, i8 %tmp_left, i8 %tmp" [/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:156]   --->   Operation 30 'call' 'call_ln156' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 6 <SV = 5> <Delay = 0.00>
+ST_6 : Operation 31 [1/2] (0.00ns)   --->   "%call_ln156 = call void @write_tmp, i8 %tmp_right, i8 %tmp_left, i8 %tmp" [/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:156]   --->   Operation 31 'call' 'call_ln156' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 7 <SV = 6> <Delay = 0.00>
+ST_7 : Operation 32 [2/2] (0.00ns)   --->   "%call_ln158 = call void @merge_sort_iterative, i8 %tmp, i8 %output_stream" [/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:158]   --->   Operation 32 'call' 'call_ln158' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 8 <SV = 7> <Delay = 0.00>
+ST_8 : Operation 33 [1/2] (0.00ns)   --->   "%call_ln158 = call void @merge_sort_iterative, i8 %tmp, i8 %output_stream" [/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:158]   --->   Operation 33 'call' 'call_ln158' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 9 <SV = 8> <Delay = 0.00>
+ST_9 : Operation 34 [2/2] (0.00ns)   --->   "%call_ln162 = call void @write_output, i8 %gmem0, i64 %output_r_c, i8 %output_stream" [/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:162]   --->   Operation 34 'call' 'call_ln162' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 10 <SV = 9> <Delay = 0.00>
+ST_10 : Operation 35 [1/1] (0.00ns)   --->   "%empty = specchannel i32 @_ssdm_op_SpecChannel, void @output_r_c_str, i32 1, void @p_str, void @p_str, i32 6, i32 0, i64 %output_r_c, i64 %output_r_c" [/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:133]   --->   Operation 35 'specchannel' 'empty' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 36 [1/1] (0.00ns)   --->   "%specinterface_ln133 = specinterface void @_ssdm_op_SpecInterface, i64 %output_r_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str, i32 4294967295, i32 0" [/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:133]   --->   Operation 36 'specinterface' 'specinterface_ln133' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 37 [1/1] (0.00ns)   --->   "%specdataflowpipeline_ln133 = specdataflowpipeline void @_ssdm_op_SpecDataflowPipeline, i32 4294967295, i32 0, void @empty_21" [/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:133]   --->   Operation 37 'specdataflowpipeline' 'specdataflowpipeline_ln133' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 38 [1/1] (0.00ns)   --->   "%spectopmodule_ln121 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_14" [/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:121]   --->   Operation 38 'spectopmodule' 'spectopmodule_ln121' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 39 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %gmem1, void @empty_22, i32 0, i32 0, void @empty_21, i32 0, i32 512, void @empty_20, void @empty_19, void @empty_21, i32 16, i32 16, i32 16, i32 16, void @empty_21, void @empty_21, i32 4294967295, i32 0"   --->   Operation 39 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 40 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i8 %gmem1"   --->   Operation 40 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 41 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %gmem2, void @empty_22, i32 0, i32 0, void @empty_21, i32 0, i32 512, void @empty_18, void @empty_19, void @empty_21, i32 16, i32 16, i32 16, i32 16, void @empty_21, void @empty_21, i32 4294967295, i32 0"   --->   Operation 41 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 42 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i8 %gmem2"   --->   Operation 42 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 43 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %gmem0, void @empty_22, i32 0, i32 0, void @empty_21, i32 0, i32 1024, void @empty_17, void @empty_19, void @empty_21, i32 16, i32 16, i32 16, i32 16, void @empty_21, void @empty_21, i32 4294967295, i32 0"   --->   Operation 43 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 44 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i8 %gmem0"   --->   Operation 44 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 45 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %left_r, void @empty_0, i32 0, i32 0, void @empty_21, i32 0, i32 0, void @empty_4, void @empty_1, void @empty_21, i32 0, i32 0, i32 0, i32 0, void @empty_21, void @empty_2, i32 4294967295, i32 0"   --->   Operation 45 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 46 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %left_r, void @empty_3, i32 0, i32 0, void @empty_21, i32 0, i32 0, void @empty_21, void @empty_21, void @empty_21, i32 0, i32 0, i32 0, i32 0, void @empty_21, void @empty_2, i32 4294967295, i32 0"   --->   Operation 46 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 47 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %right_r, void @empty_0, i32 0, i32 0, void @empty_21, i32 0, i32 0, void @empty_4, void @empty_13, void @empty_21, i32 0, i32 0, i32 0, i32 0, void @empty_21, void @empty_2, i32 4294967295, i32 0"   --->   Operation 47 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 48 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %right_r, void @empty_3, i32 0, i32 0, void @empty_21, i32 0, i32 0, void @empty_21, void @empty_21, void @empty_21, i32 0, i32 0, i32 0, i32 0, void @empty_21, void @empty_2, i32 4294967295, i32 0"   --->   Operation 48 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 49 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %output_r, void @empty_0, i32 0, i32 0, void @empty_21, i32 0, i32 0, void @empty_4, void @empty_23, void @empty_21, i32 0, i32 0, i32 0, i32 0, void @empty_21, void @empty_2, i32 4294967295, i32 0"   --->   Operation 49 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 50 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %output_r, void @empty_3, i32 0, i32 0, void @empty_21, i32 0, i32 0, void @empty_21, void @empty_21, void @empty_21, i32 0, i32 0, i32 0, i32 0, void @empty_21, void @empty_2, i32 4294967295, i32 0"   --->   Operation 50 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 51 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty_0, i32 0, i32 0, void @empty_21, i32 0, i32 0, void @empty_4, void @empty_21, void @empty_21, i32 0, i32 0, i32 0, i32 0, void @empty_21, void @empty_21, i32 4294967295, i32 0"   --->   Operation 51 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 52 [1/1] (0.00ns)   --->   "%empty_65 = specchannel i32 @_ssdm_op_SpecChannel, void @left_stream_str, i32 1, void @p_str, void @p_str, i32 2, i32 2, i8 %left_stream, i8 %left_stream"   --->   Operation 52 'specchannel' 'empty_65' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 53 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %left_stream, void @empty_10, i32 0, i32 0, void @empty_21, i32 0, i32 0, void @empty_21, void @empty_21, void @empty_21, i32 0, i32 0, i32 0, i32 0, void @empty_21, void @empty_21, i32 4294967295, i32 0"   --->   Operation 53 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 54 [1/1] (0.00ns)   --->   "%empty_66 = specchannel i32 @_ssdm_op_SpecChannel, void @tmp_left_str, i32 1, void @p_str, void @p_str, i32 2, i32 2, i8 %tmp_left, i8 %tmp_left"   --->   Operation 54 'specchannel' 'empty_66' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 55 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %tmp_left, void @empty_10, i32 0, i32 0, void @empty_21, i32 0, i32 0, void @empty_21, void @empty_21, void @empty_21, i32 0, i32 0, i32 0, i32 0, void @empty_21, void @empty_21, i32 4294967295, i32 0"   --->   Operation 55 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 56 [1/1] (0.00ns)   --->   "%empty_67 = specchannel i32 @_ssdm_op_SpecChannel, void @right_stream_str, i32 1, void @p_str, void @p_str, i32 2, i32 2, i8 %right_stream, i8 %right_stream"   --->   Operation 56 'specchannel' 'empty_67' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 57 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %right_stream, void @empty_10, i32 0, i32 0, void @empty_21, i32 0, i32 0, void @empty_21, void @empty_21, void @empty_21, i32 0, i32 0, i32 0, i32 0, void @empty_21, void @empty_21, i32 4294967295, i32 0"   --->   Operation 57 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 58 [1/1] (0.00ns)   --->   "%empty_68 = specchannel i32 @_ssdm_op_SpecChannel, void @tmp_right_str, i32 1, void @p_str, void @p_str, i32 2, i32 2, i8 %tmp_right, i8 %tmp_right"   --->   Operation 58 'specchannel' 'empty_68' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 59 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %tmp_right, void @empty_10, i32 0, i32 0, void @empty_21, i32 0, i32 0, void @empty_21, void @empty_21, void @empty_21, i32 0, i32 0, i32 0, i32 0, void @empty_21, void @empty_21, i32 4294967295, i32 0"   --->   Operation 59 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 60 [1/1] (0.00ns)   --->   "%empty_69 = specchannel i32 @_ssdm_op_SpecChannel, void @tmp_str, i32 1, void @p_str, void @p_str, i32 2, i32 2, i8 %tmp, i8 %tmp"   --->   Operation 60 'specchannel' 'empty_69' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 61 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %tmp, void @empty_10, i32 0, i32 0, void @empty_21, i32 0, i32 0, void @empty_21, void @empty_21, void @empty_21, i32 0, i32 0, i32 0, i32 0, void @empty_21, void @empty_21, i32 4294967295, i32 0"   --->   Operation 61 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 62 [1/1] (0.00ns)   --->   "%empty_70 = specchannel i32 @_ssdm_op_SpecChannel, void @output_stream_str, i32 1, void @p_str, void @p_str, i32 2, i32 2, i8 %output_stream, i8 %output_stream"   --->   Operation 62 'specchannel' 'empty_70' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 63 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %output_stream, void @empty_10, i32 0, i32 0, void @empty_21, i32 0, i32 0, void @empty_21, void @empty_21, void @empty_21, i32 0, i32 0, i32 0, i32 0, void @empty_21, void @empty_21, i32 4294967295, i32 0"   --->   Operation 63 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 64 [1/2] (0.00ns)   --->   "%call_ln162 = call void @write_output, i8 %gmem0, i64 %output_r_c, i8 %output_stream" [/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:162]   --->   Operation 64 'call' 'call_ln162' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_10 : Operation 65 [1/1] (0.00ns)   --->   "%ret_ln163 = ret" [/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:163]   --->   Operation 65 'ret' 'ret_ln163' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 4.591ns
+The critical path consists of the following:
+	s_axi read operation ('output_r_read', /home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:133) on port 'output_r' (/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:133) [7]  (1.000 ns)
+	'call' operation 0 bit ('call_ln133', /home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp:133) to 'entry_proc' [46]  (3.591 ns)
+
+ <State 2>: 0.000ns
+The critical path consists of the following:
+
+ <State 3>: 0.000ns
+The critical path consists of the following:
+
+ <State 4>: 0.000ns
+The critical path consists of the following:
+
+ <State 5>: 0.000ns
+The critical path consists of the following:
+
+ <State 6>: 0.000ns
+The critical path consists of the following:
+
+ <State 7>: 0.000ns
+The critical path consists of the following:
+
+ <State 8>: 0.000ns
+The critical path consists of the following:
+
+ <State 9>: 0.000ns
+The critical path consists of the following:
+
+ <State 10>: 0.000ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

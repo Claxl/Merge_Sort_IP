@@ -1,0 +1,74 @@
+{
+  "0": {
+    "basicblocks": 1,
+    "calls": "1 4 6 5 2 7 3",
+    "file": "merge_sort.cpp",
+    "fileloc": 121,
+    "instructions": 45,
+    "name": "merge_sort",
+    "total_instructions": 25012
+  },
+  "1": {
+    "basicblocks": 3,
+    "calls": "",
+    "file": "merge_sort.cpp",
+    "fileloc": 38,
+    "instructions": 11,
+    "name": "read_input",
+    "total_instructions": 11
+  },
+  "2": {
+    "basicblocks": 5,
+    "calls": "",
+    "file": "merge_sort.cpp",
+    "fileloc": 106,
+    "instructions": 15,
+    "name": "write_tmp",
+    "total_instructions": 15
+  },
+  "3": {
+    "basicblocks": 3,
+    "calls": "",
+    "file": "merge_sort.cpp",
+    "fileloc": 46,
+    "instructions": 11,
+    "name": "write_output",
+    "total_instructions": 11
+  },
+  "4": {
+    "basicblocks": 3,
+    "calls": "",
+    "file": "merge_sort.cpp",
+    "fileloc": 38,
+    "instructions": 11,
+    "name": "read_input",
+    "total_instructions": 11
+  },
+  "5": {
+    "basicblocks": 1572,
+    "calls": "",
+    "file": "merge_sort.cpp",
+    "fileloc": 54,
+    "instructions": 7795,
+    "name": "merge_sort_iterative",
+    "total_instructions": 7795
+  },
+  "6": {
+    "basicblocks": 1572,
+    "calls": "",
+    "file": "merge_sort.cpp",
+    "fileloc": 54,
+    "instructions": 7795,
+    "name": "merge_sort_iterative",
+    "total_instructions": 7795
+  },
+  "7": {
+    "basicblocks": 2084,
+    "calls": "",
+    "file": "merge_sort.cpp",
+    "fileloc": 54,
+    "instructions": 9329,
+    "name": "merge_sort_iterative",
+    "total_instructions": 9329
+  }
+}

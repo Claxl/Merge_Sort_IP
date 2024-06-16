@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# xsim v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Sun Jun  9 11:47:25 2024
+# Process ID: 33992
+# Current directory: /home/claxl/Documents/Double/merge_sort_double/merge_sort_double/hls/sim/verilog
+# Command line: xsim -mode tcl -source {xsim.dir/merge_sort/xsim_script.tcl}
+# Log file: /home/claxl/Documents/Double/merge_sort_double/merge_sort_double/hls/sim/verilog/xsim.log
+# Journal file: /home/claxl/Documents/Double/merge_sort_double/merge_sort_double/hls/sim/verilog/xsim.jou
+# Running On: claudios, OS: Linux, CPU Frequency: 4626.451 MHz, CPU Physical cores: 4, Host memory: 24873 MB
+#-----------------------------------------------------------
+source xsim.dir/merge_sort/xsim_script.tcl
+source merge_sort.tcl

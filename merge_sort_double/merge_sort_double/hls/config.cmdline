@@ -1,0 +1,3 @@
+relativeroot=/home/claxl/Documents/Double/merge_sort_double
+original_argv=--mode hls --cosim --config /home/claxl/Documents/Double/merge_sort_double/hls_config.cfg --work_dir merge_sort_double 
+

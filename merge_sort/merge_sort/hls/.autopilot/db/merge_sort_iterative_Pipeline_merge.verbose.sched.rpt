@@ -1,0 +1,179 @@
+
+
+================================================================
+== Vitis HLS Report for 'merge_sort_iterative_Pipeline_merge'
+================================================================
+* Date:           Tue May 28 19:22:40 2024
+
+* Version:        2023.2 (Build 4023990 on Oct 11 2023)
+* Project:        merge_sort
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.073 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |          |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- merge   |        ?|        ?|         3|          1|          1|     ?|       yes|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 3
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 3
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 3, States = { 1 2 3 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 6.07>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%left_val = alloca i32 1" [/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:5->/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:91]   --->   Operation 6 'alloca' 'left_val' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%right_val = alloca i32 1" [/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:5->/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:91]   --->   Operation 7 'alloca' 'right_val' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %temp_stream, void @empty_6, i32 0, i32 0, void @empty_13, i32 0, i32 0, void @empty_13, void @empty_13, void @empty_13, i32 0, i32 0, i32 0, i32 0, void @empty_13, void @empty_13, i32 4294967295, i32 0"   --->   Operation 8 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %right_stream, void @empty_6, i32 0, i32 0, void @empty_13, i32 0, i32 0, void @empty_13, void @empty_13, void @empty_13, i32 0, i32 0, i32 0, i32 0, void @empty_13, void @empty_13, i32 4294967295, i32 0"   --->   Operation 9 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %left_stream, void @empty_6, i32 0, i32 0, void @empty_13, i32 0, i32 0, void @empty_13, void @empty_13, void @empty_13, i32 0, i32 0, i32 0, i32 0, void @empty_13, void @empty_13, i32 4294967295, i32 0"   --->   Operation 10 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (1.58ns)   --->   "%br_ln0 = br void %while.body.i"   --->   Operation 11 'br' 'br_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%left_empty = phi i1 1, void %newFuncRoot, i1 %left_empty_2, void %if.end18.i"   --->   Operation 12 'phi' 'left_empty' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%right_empty = phi i1 1, void %newFuncRoot, i1 %right_empty_2, void %if.end18.i"   --->   Operation 13 'phi' 'right_empty' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%specpipeline_ln9 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_13" [/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:9->/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:91]   --->   Operation 14 'specpipeline' 'specpipeline_ln9' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%specloopname_ln8 = specloopname void @_ssdm_op_SpecLoopName, void @empty_9" [/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:8->/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:91]   --->   Operation 15 'specloopname' 'specloopname_ln8' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (1.58ns)   --->   "%br_ln10 = br i1 %left_empty, void %if.end.i, void %land.lhs.true.i" [/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:10->/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:91]   --->   Operation 16 'br' 'br_ln10' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%tmp_2 = nbreadreq i1 @_ssdm_op_NbReadReq.ap_fifo.i8P0A, i8 %left_stream, i32 1" [/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:10->/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:91]   --->   Operation 17 'nbreadreq' 'tmp_2' <Predicate = (left_empty)> <Delay = 0.00> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 3.50> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1024> <FIFO>
+ST_1 : Operation 18 [1/1] (1.58ns)   --->   "%br_ln10 = br i1 %tmp_2, void %if.end.i, void %if.then.i" [/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:10->/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:91]   --->   Operation 18 'br' 'br_ln10' <Predicate = (left_empty)> <Delay = 1.58>
+ST_1 : Operation 19 [1/1] (3.50ns)   --->   "%left_val_1 = read i8 @_ssdm_op_Read.ap_fifo.volatile.i8P0A, i8 %left_stream" [/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:11->/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:91]   --->   Operation 19 'read' 'left_val_1' <Predicate = (left_empty & tmp_2)> <Delay = 3.50> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 3.50> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1024> <FIFO>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%store_ln5 = store i8 %left_val_1, i8 %left_val" [/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:5->/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:91]   --->   Operation 20 'store' 'store_ln5' <Predicate = (left_empty & tmp_2)> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (1.58ns)   --->   "%br_ln13 = br void %if.end.i" [/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:13->/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:91]   --->   Operation 21 'br' 'br_ln13' <Predicate = (left_empty & tmp_2)> <Delay = 1.58>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%left_empty_1 = phi i1 0, void %if.then.i, i1 0, void %while.body.i, i1 1, void %land.lhs.true.i"   --->   Operation 22 'phi' 'left_empty_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (1.58ns)   --->   "%br_ln14 = br i1 %right_empty, void %if.end5.i, void %land.lhs.true1.i" [/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:14->/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:91]   --->   Operation 23 'br' 'br_ln14' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%tmp_3 = nbreadreq i1 @_ssdm_op_NbReadReq.ap_fifo.i8P0A, i8 %right_stream, i32 1" [/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:14->/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:91]   --->   Operation 24 'nbreadreq' 'tmp_3' <Predicate = (right_empty)> <Delay = 0.00> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 3.50> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1024> <FIFO>
+ST_1 : Operation 25 [1/1] (1.58ns)   --->   "%br_ln14 = br i1 %tmp_3, void %if.end5.i, void %if.then3.i" [/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:14->/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:91]   --->   Operation 25 'br' 'br_ln14' <Predicate = (right_empty)> <Delay = 1.58>
+ST_1 : Operation 26 [1/1] (3.50ns)   --->   "%right_val_1 = read i8 @_ssdm_op_Read.ap_fifo.volatile.i8P0A, i8 %right_stream" [/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:15->/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:91]   --->   Operation 26 'read' 'right_val_1' <Predicate = (right_empty & tmp_3)> <Delay = 3.50> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 3.50> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1024> <FIFO>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%store_ln5 = store i8 %right_val_1, i8 %right_val" [/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:5->/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:91]   --->   Operation 27 'store' 'store_ln5' <Predicate = (right_empty & tmp_3)> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (1.58ns)   --->   "%br_ln17 = br void %if.end5.i" [/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:17->/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:91]   --->   Operation 28 'br' 'br_ln17' <Predicate = (right_empty & tmp_3)> <Delay = 1.58>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%right_empty_1 = phi i1 0, void %if.then3.i, i1 0, void %if.end.i, i1 1, void %land.lhs.true1.i"   --->   Operation 29 'phi' 'right_empty_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.97ns)   --->   "%or_ln19 = or i1 %left_empty_1, i1 %right_empty_1" [/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:19->/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:91]   --->   Operation 30 'or' 'or_ln19' <Predicate = true> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%br_ln19 = br i1 %or_ln19, void %if.then7.i, void %if.else11.i" [/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:19->/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:91]   --->   Operation 31 'br' 'br_ln19' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%br_ln27 = br i1 %left_empty_1, void %if.then12.i, void %if.else13.i" [/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:27->/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:91]   --->   Operation 32 'br' 'br_ln27' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (1.70ns)   --->   "%br_ln30 = br void %if.end18.i" [/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:30->/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:91]   --->   Operation 33 'br' 'br_ln30' <Predicate = (!left_empty_1)> <Delay = 1.70>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%br_ln30 = br i1 %right_empty_1, void %if.end16.i, void %_Z20merge_sort_primitiveRN3hls6streamI7ap_uintILi8EELi0EEES4_S4_.exit.exitStub" [/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:30->/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:91]   --->   Operation 34 'br' 'br_ln30' <Predicate = (left_empty_1)> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (1.70ns)   --->   "%br_ln0 = br void %if.end18.i"   --->   Operation 35 'br' 'br_ln0' <Predicate = (left_empty_1 & !right_empty_1)> <Delay = 1.70>
+
+State 2 <SV = 1> <Delay = 5.21>
+ST_2 : Operation 36 [1/1] (0.00ns)   --->   "%left_val_2 = load i8 %left_val" [/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:28->/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:91]   --->   Operation 36 'load' 'left_val_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 37 [1/1] (0.00ns)   --->   "%right_val_2 = load i8 %right_val" [/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:24->/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:91]   --->   Operation 37 'load' 'right_val_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 38 [1/1] (1.91ns)   --->   "%icmp_ln20 = icmp_ugt  i8 %left_val_2, i8 %right_val_2" [/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:20->/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:91]   --->   Operation 38 'icmp' 'icmp_ln20' <Predicate = (!or_ln19)> <Delay = 1.91> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 39 [1/1] (0.00ns)   --->   "%br_ln20 = br i1 %icmp_ln20, void %if.then9.i, void %if.else.i" [/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:20->/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:91]   --->   Operation 39 'br' 'br_ln20' <Predicate = (!or_ln19)> <Delay = 0.00>
+ST_2 : Operation 40 [1/1] (1.70ns)   --->   "%br_ln23 = br void %if.end18.i" [/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:23->/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:91]   --->   Operation 40 'br' 'br_ln23' <Predicate = (!or_ln19 & !icmp_ln20)> <Delay = 1.70>
+ST_2 : Operation 41 [1/1] (1.70ns)   --->   "%br_ln0 = br void %if.end18.i"   --->   Operation 41 'br' 'br_ln0' <Predicate = (!or_ln19 & icmp_ln20)> <Delay = 1.70>
+ST_2 : Operation 42 [1/1] (0.00ns)   --->   "%left_empty_2 = phi i1 1, void %if.then9.i, i1 0, void %if.else.i, i1 1, void %if.end16.i, i1 1, void %if.then12.i"   --->   Operation 42 'phi' 'left_empty_2' <Predicate = (!right_empty_1) | (!left_empty_1) | (!or_ln19)> <Delay = 0.00>
+ST_2 : Operation 43 [1/1] (0.00ns)   --->   "%right_empty_2 = phi i1 0, void %if.then9.i, i1 1, void %if.else.i, i1 1, void %if.end16.i, i1 %right_empty_1, void %if.then12.i"   --->   Operation 43 'phi' 'right_empty_2' <Predicate = (!right_empty_1) | (!left_empty_1) | (!or_ln19)> <Delay = 0.00>
+ST_2 : Operation 44 [1/1] (0.00ns)   --->   "%br_ln8 = br void %while.body.i" [/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:8->/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:91]   --->   Operation 44 'br' 'br_ln8' <Predicate = (!right_empty_1) | (!left_empty_1) | (!or_ln19)> <Delay = 0.00>
+ST_2 : Operation 49 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 49 'ret' 'ret_ln0' <Predicate = (left_empty_1 & right_empty_1)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 3.50>
+ST_3 : Operation 45 [1/1] (3.50ns)   --->   "%write_ln21 = write void @_ssdm_op_Write.ap_fifo.volatile.i8P0A, i8 %temp_stream, i8 %left_val_2" [/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:21->/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:91]   --->   Operation 45 'write' 'write_ln21' <Predicate = (!or_ln19 & !icmp_ln20)> <Delay = 3.50> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 3.50> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1024> <FIFO>
+ST_3 : Operation 46 [1/1] (3.50ns)   --->   "%write_ln24 = write void @_ssdm_op_Write.ap_fifo.volatile.i8P0A, i8 %temp_stream, i8 %right_val_2" [/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:24->/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:91]   --->   Operation 46 'write' 'write_ln24' <Predicate = (!or_ln19 & icmp_ln20)> <Delay = 3.50> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 3.50> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1024> <FIFO>
+ST_3 : Operation 47 [1/1] (3.50ns)   --->   "%write_ln28 = write void @_ssdm_op_Write.ap_fifo.volatile.i8P0A, i8 %temp_stream, i8 %left_val_2" [/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:28->/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:91]   --->   Operation 47 'write' 'write_ln28' <Predicate = (!left_empty_1)> <Delay = 3.50> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 3.50> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1024> <FIFO>
+ST_3 : Operation 48 [1/1] (3.50ns)   --->   "%write_ln31 = write void @_ssdm_op_Write.ap_fifo.volatile.i8P0A, i8 %temp_stream, i8 %right_val_2" [/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:31->/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:91]   --->   Operation 48 'write' 'write_ln31' <Predicate = (left_empty_1 & !right_empty_1)> <Delay = 3.50> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 3.50> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1024> <FIFO>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 6.073ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation 1 bit ('left_empty') [11]  (1.588 ns)
+	'phi' operation 1 bit ('left_empty') [11]  (0.000 ns)
+	fifo read operation ('left_val', /home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:11->/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:91) on port 'left_stream' (/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:11->/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:91) [20]  (3.507 ns)
+	blocking operation 0.978 ns on control path)
+
+ <State 2>: 5.214ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation 1 bit ('left_empty') [59]  (1.707 ns)
+	'phi' operation 1 bit ('left_empty') [59]  (0.000 ns)
+	'phi' operation 1 bit ('left_empty') [11]  (0.000 ns)
+	fifo read operation ('left_val', /home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:11->/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:91) on port 'left_stream' (/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:11->/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:91) [20]  (3.507 ns)
+
+ <State 3>: 3.507ns
+The critical path consists of the following:
+	fifo write operation ('write_ln21', /home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:21->/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:91) on port 'temp_stream' (/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:21->/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:91) [43]  (3.507 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

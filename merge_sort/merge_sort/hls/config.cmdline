@@ -1,0 +1,3 @@
+relativeroot=/home/claxl/Documents/NECSTCamp/merge_sort
+original_argv=--mode hls --csim --config /home/claxl/Documents/NECSTCamp/merge_sort/hls_config.cfg --work_dir merge_sort 
+

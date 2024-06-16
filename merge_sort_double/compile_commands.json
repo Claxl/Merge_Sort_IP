@@ -1,0 +1,44 @@
+[
+  {
+    "directory": "/home/claxl/Documents/Double/merge_sort_double",
+    "arguments": [
+      "/tools/Xilinx/Vitis_HLS/2023.2/tps/lnx64/gcc-8.3.0/bin/g++",
+      "-isystem/tools/Xilinx/Vitis_HLS/2023.2/include",
+      "-isystem/tools/Xilinx/Vitis_HLS/2023.2/include/etc",
+      "-isystem/tools/Xilinx/Vitis_HLS/2023.2/include/ap_sysc",
+      "-isystem/tools/Xilinx/Vitis_HLS/2023.2/lnx64/tools/auto_cc/include",
+      "-isystem/tools/Xilinx/Vitis_HLS/2023.2/lnx64/tools/systemc/include",
+      "--compile",
+      "/home/claxl/Documents/merge_sort_double.hpp"
+    ],
+    "file": "/home/claxl/Documents/merge_sort_double.hpp"
+  },
+  {
+    "directory": "/home/claxl/Documents/Double/merge_sort_double",
+    "arguments": [
+      "/tools/Xilinx/Vitis_HLS/2023.2/tps/lnx64/gcc-8.3.0/bin/g++",
+      "-isystem/tools/Xilinx/Vitis_HLS/2023.2/include",
+      "-isystem/tools/Xilinx/Vitis_HLS/2023.2/include/etc",
+      "-isystem/tools/Xilinx/Vitis_HLS/2023.2/include/ap_sysc",
+      "-isystem/tools/Xilinx/Vitis_HLS/2023.2/lnx64/tools/auto_cc/include",
+      "-isystem/tools/Xilinx/Vitis_HLS/2023.2/lnx64/tools/systemc/include",
+      "--compile",
+      "/home/claxl/Documents/Double/merge_sort_double/merge_sort.hpp"
+    ],
+    "file": "/home/claxl/Documents/Double/merge_sort_double/merge_sort.hpp"
+  },
+  {
+    "directory": "/home/claxl/Documents/Double/merge_sort_double",
+    "arguments": [
+      "/tools/Xilinx/Vitis_HLS/2023.2/tps/lnx64/gcc-8.3.0/bin/g++",
+      "-isystem/tools/Xilinx/Vitis_HLS/2023.2/include",
+      "-isystem/tools/Xilinx/Vitis_HLS/2023.2/include/etc",
+      "-isystem/tools/Xilinx/Vitis_HLS/2023.2/include/ap_sysc",
+      "-isystem/tools/Xilinx/Vitis_HLS/2023.2/lnx64/tools/auto_cc/include",
+      "-isystem/tools/Xilinx/Vitis_HLS/2023.2/lnx64/tools/systemc/include",
+      "--compile",
+      "/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp"
+    ],
+    "file": "/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp"
+  }
+]

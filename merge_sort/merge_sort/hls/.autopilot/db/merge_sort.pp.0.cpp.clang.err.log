@@ -1,0 +1,61 @@
+/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:9:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=merge_sort_primitive_XLX_SEP_ PragmaOptions=II=1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE II=1
+        ^
+/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:42:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=read_input_XLX_SEP_ PragmaOptions=II=1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE II=1
+        ^
+/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:50:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=write_output_XLX_SEP_ PragmaOptions=II=1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE II=1
+        ^
+/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:60:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=merge_sort_iterative_XLX_SEP_ PragmaOptions=variable=left_stream depth=1024_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=left_stream depth=1024
+        ^
+/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:61:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=merge_sort_iterative_XLX_SEP_ PragmaOptions=variable=right_stream depth=1024_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=right_stream depth=1024
+        ^
+/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:62:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=merge_sort_iterative_XLX_SEP_ PragmaOptions=variable=temp_stream depth=1024_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=temp_stream depth=1024
+        ^
+/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:67:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=merge_sort_iterative_XLX_SEP_ PragmaOptions=variable=buffer complete dim=1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS ARRAY_PARTITION variable=buffer complete dim=1
+        ^
+/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:72:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=merge_sort_iterative_XLX_SEP_ PragmaOptions=II=1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE II=1
+        ^
+/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:84:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=merge_sort_iterative_XLX_SEP_ PragmaOptions=II=1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE II=1
+        ^
+/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:94:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=merge_sort_iterative_XLX_SEP_ PragmaOptions=II=1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE II=1
+        ^
+/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:102:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=merge_sort_iterative_XLX_SEP_ PragmaOptions=II=1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE II=1
+        ^
+directive:1:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=merge_sort_XLX_SEP_ PragmaOptions=name=merge_sort_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLSDIRECTIVE TOP name=merge_sort
+        ^
+/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:108:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=merge_sort_XLX_SEP_ PragmaOptions=mode=s_axilite port=return bundle=control_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE mode=s_axilite port=return bundle=control
+        ^
+/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:110:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=merge_sort_XLX_SEP_ PragmaOptions=mode=m_axi port=input bundle=gmem depth=1024 offset=slave_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE mode=m_axi port=input bundle=gmem depth=1024 offset=slave
+        ^
+/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:111:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=merge_sort_XLX_SEP_ PragmaOptions=mode=m_axi port=output bundle=gmem depth=1024 offset=slave_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE mode=m_axi port=output bundle=gmem depth=1024 offset=slave
+        ^
+/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:113:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=merge_sort_XLX_SEP_ PragmaOptions=mode=s_axilite port=input bundle=control_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE mode=s_axilite port=input bundle=control
+        ^
+/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:114:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=merge_sort_XLX_SEP_ PragmaOptions=mode=s_axilite port=output bundle=control_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE mode=s_axilite port=output bundle=control
+        ^
+/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:115:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=dataflow_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=merge_sort_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS DATAFLOW
+        ^
+/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:120:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=merge_sort_XLX_SEP_ PragmaOptions=variable=input_stream depth=2_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=input_stream depth=2
+        ^
+/home/claxl/Documents/NECSTCamp/merge_sort/merge_sort.cpp:121:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=merge_sort_XLX_SEP_ PragmaOptions=variable=output_stream depth=2_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=output_stream depth=2
+        ^
+20 warnings generated.

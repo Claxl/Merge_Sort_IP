@@ -1,0 +1,1 @@
+set ::AESL_AUTOSIM::gTopFileName /home/claxl/Documents/Double/merge_sort_double/merge_sort_double/hls/./sim/autowrap/testbench/merge_sort.cpp_pre.cpp.tb.cpp

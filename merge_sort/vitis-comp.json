@@ -1,0 +1,12 @@
+{
+  "name": "merge_sort",
+  "type": "HLS",
+  "configuration": {
+    "componentType": "HLS",
+    "configFiles": [
+      "hls_config.cfg"
+    ],
+    "work_dir": "merge_sort"
+  },
+  "previousBuildStatusMap": {}
+}

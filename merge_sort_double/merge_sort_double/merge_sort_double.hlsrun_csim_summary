@@ -1,0 +1,158 @@
+<ENTRY>
+{
+ "thisFile": "/home/claxl/Documents/Double/merge_sort_double/merge_sort_double/merge_sort_double.hlsrun_csim_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Sat Jun  8 17:24:28 2024",
+ "timestampMillis": "1717860268189",
+ "buildStep": {
+  "cmdId": "b133c22a-7d65-4eac-ad91-4b5dd16c4a67",
+  "name": "vitis-run",
+  "logFile": "/home/claxl/Documents/Double/merge_sort_double/merge_sort_double/logs/merge_sort_double.steps.log",
+  "commandLine": "/tools/Xilinx/Vitis/2023.2/bin/unwrapped/lnx64.o/vitis-run  --mode hls --csim --config /home/claxl/Documents/Double/merge_sort_double/hls_config.cfg --work_dir merge_sort_double ",
+  "args": [
+   "--mode",
+   "hls",
+   "--csim",
+   "--config",
+   "/home/claxl/Documents/Double/merge_sort_double/hls_config.cfg",
+   "--work_dir",
+   "merge_sort_double"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/claxl/Documents/Double/merge_sort_double"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Jun  8 17:24:28 2024",
+ "timestampMillis": "1717860268189",
+ "status": {
+  "cmdId": "b133c22a-7d65-4eac-ad91-4b5dd16c4a67",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Sat Jun  8 17:24:30 2024",
+ "timestampMillis": "1717860270395",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_C_SIM",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "merge_sort",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/claxl/Documents/merge_sort_double.hpp",
+     "/home/claxl/Documents/Double/merge_sort_double/merge_sort.cpp",
+     "/home/claxl/Documents/Double/merge_sort_double/merge_sort.hpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2023.2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sat Jun  8 17:24:30 2024",
+ "timestampMillis": "1717860270396",
+ "buildStep": {
+  "cmdId": "d80686ba-551c-406d-afad-dcaabc18ed93",
+  "name": "csim_design",
+  "logFile": "/home/claxl/Documents/Double/merge_sort_double/merge_sort_double/hls/hls.log",
+  "commandLine": "csim_design",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/claxl/Documents/Double/merge_sort_double"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Jun  8 17:24:30 2024",
+ "timestampMillis": "1717860270396",
+ "status": {
+  "cmdId": "d80686ba-551c-406d-afad-dcaabc18ed93",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Jun  8 17:24:31 2024",
+ "timestampMillis": "1717860271558",
+ "status": {
+  "cmdId": "d80686ba-551c-406d-afad-dcaabc18ed93",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Jun  8 17:24:31 2024",
+ "timestampMillis": "1717860271628",
+ "status": {
+  "cmdId": "b133c22a-7d65-4eac-ad91-4b5dd16c4a67",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun  8 17:24:31 2024",
+ "timestampMillis": "1717860271628",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun  8 17:24:31 2024",
+ "timestampMillis": "1717860271629",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

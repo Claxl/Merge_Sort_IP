@@ -1,0 +1,12 @@
+{
+  "name": "merge_sort_double",
+  "type": "HLS",
+  "configuration": {
+    "componentType": "HLS",
+    "configFiles": [
+      "hls_config.cfg"
+    ],
+    "work_dir": "merge_sort_double"
+  },
+  "previousBuildStatusMap": {}
+}
